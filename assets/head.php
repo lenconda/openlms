@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">图书管理系统</a>
+            <a class="navbar-brand" href="index.php">图书管理系统</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->

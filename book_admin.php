@@ -16,7 +16,8 @@
     <script src="js/bootstrap.js"></script>
     <title>图书管理系统</title>
     <?php
-    include "config/config_inc.php";
+        include "config/config_inc.php";
+        session_start();
     ?>
 </head>
 <body>
@@ -29,7 +30,6 @@
         <div class="row">
             <div><input type="submit" class="btn btn-success" value="刷新" name="refresh"><button class="btn btn-primary" data-toggle="modal" data-target=".myModal1">添加图书</button></div><br/>
             <?php
-                session_start();
                 include "config/config_inc.php";
                 mysqli_query($link,"set NAMES 'UTF8'");
                 $books=mysqli_query($link,"select * from `lms_books`");
@@ -99,7 +99,7 @@
                     </form>
                     <?php
                         if (isset($_POST['add'])){
-                            $intime_date=date("y-m-d",time());
+                            $intime_date=date("Y-m-d",time());
                             $add_book=mysqli_query($link,"INSERT INTO `lms_books` (`name`, `type`, `author`, `isbn`, `publisher`, `price`, `page`, `intime`, `borrow`) VALUES ('{$_POST['bk_name']}', '{$_POST['bk_type']}', '{$_POST['bk_author']}', '{$_POST['bk_isbn']}', '{$_POST['bk_publisher']}', '{$_POST['bk_price']}', '{$_POST['bk_page']}', '{$intime_date}', '0')");
                             if (!$add_book){
                                 echo "<script>alert('添加图书失败')</script>";
