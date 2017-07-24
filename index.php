@@ -29,6 +29,7 @@
 
         <div class="col-md-10">
             <div class="row">
+                <div align="center"><h3>图书借阅排行榜</h3></div>
                 <?php
                     include "config/config_inc.php";
                     mysqli_query($link,"set NAMES 'UTF8'");
@@ -100,7 +101,7 @@
                                         //更新lms_books表中的borrow字段
                                         $update_info=mysqli_query($link,"update `lms_books` set `borrow`='{$br_time}' where `id`='{$_POST['br_book']}'");
                                         //新建图书借阅记录
-                                        $borrow=mysqli_query($link,"INSERT INTO `lms_borrow` (`book_name`, `book_isbn`, `stu_name`, `stu_id`, `borrow_time`, `return_time`, `if_return`) VALUES ('{$book_info_row['name']}', '{$book_info_row['isbn']}', '{$_POST['stu_name']}', '{$_POST['stu_id']}', '{$borrow_date}', '{$_POST['return_time']}', '1')");
+                                        $borrow=mysqli_query($link,"INSERT INTO `lms_borrow` (`book_name`, `book_isbn`,`book_publisher`, `stu_name`, `stu_id`, `borrow_time`, `return_time`, `if_return`) VALUES ('{$book_info_row['name']}', '{$book_info_row['isbn']}', '{$book_info_row['publisher']}', '{$_POST['stu_name']}', '{$_POST['stu_id']}', '{$borrow_date}', '{$_POST['return_time']}', '1')");
                                         if (!$borrow){
                                             echo "<script>alert('借出失败')</script>";
                                         }else{
@@ -110,20 +111,7 @@
                                     }
                                 }
                             ?>
-
                         </form>
-                        <?php
-                        if (isset($_POST['add'])){
-                            $intime_date=date("Y-m-d",time());
-                            $add_book=mysqli_query($link,"INSERT INTO `lms_books` (`name`, `type`, `author`, `isbn`, `publisher`, `price`, `page`, `intime`, `borrow`) VALUES ('{$_POST['bk_name']}', '{$_POST['bk_type']}', '{$_POST['bk_author']}', '{$_POST['bk_isbn']}', '{$_POST['bk_publisher']}', '{$_POST['bk_price']}', '{$_POST['bk_page']}', '{$intime_date}', '0')");
-                            if (!$add_book){
-                                echo "<script>alert('添加图书失败')</script>";
-                            }else{
-                                echo "<script>alert('添加图书成功')</script>";
-                                echo "<script>window.location.href='index.php'</script>";
-                            }
-                        }
-                        ?>
                     </div><!--modal-body,弹出层主体区域-->
                 </div>
             </div>
