@@ -47,7 +47,7 @@
                     echo "<td>".$books_row['page']."</td>";
                     echo "<td>".$books_row['intime']."</td>";
                     echo "<td>".$books_row['borrow']."</td>";
-                    echo "<td><form method='post'><input type='hidden' value='{$books_row['id']}' name='book_id'><input type='submit' class='btn btn-danger' name='delete' value='删除'></td>";
+                    echo "<td><div><form method='get' action='#'><button name='mod_book_id' class='btn btn-success' data-toggle='modal' data-target='.myModal2' value='{$books_row['id']}'>修改</button></form></div><div><form method='post'><input type='hidden' value='{$books_row['id']}' name='book_id'><input type='submit' class='btn btn-danger' name='delete' value='删除'></form></div></td>";
                     echo "</tr>";
                 }
                 if (isset($_POST['delete'])){
@@ -113,6 +113,85 @@
             </div>
         </div>
     </div>
+
+
+    <div class="modal fade myModal2"><!--modal,弹出层父级,fade使弹出层有一个运动过程-->
+        <div class="modal-dialog"><!--modal-dialog,弹出层-->
+            <div class="modal-content"><!--modal-content,弹出层内容区域-->
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal">×</button><!--将关闭按钮放在标题前面可以使按钮位于右上角-->
+                    <h4>修改图书信息</h4>
+                </div><!--modal-header,弹出层头部区域-->
+                <div class="modal-body">
+                    <form method="post">
+                        <?php
+                            mysqli_query($link,"set NAMES 'UTF8'");
+                            $book_info=mysqli_query($link,"select * from `lms_books` where `id`='{$_GET['mod_book_id']}' ");
+                            $book_info_row=mysqli_fetch_array($book_info);
+                            //计时函数，获取借书时间
+                            $borrow_date=date("Y-m-d",time());
+                            echo "<h5>图书ID:   ".$_GET['mod_book_id']."</h5><br/>";
+                            echo "<p>图书名称</p>";
+                            echo "<form method='post'><input type='text' name='mod_name' class='form-control' style='width: auto' value='{$book_info_row['name']}'><br/>";
+                            echo "<p>图书类别</p>";
+                            echo "<select class='form-control' style='width: auto' name='mod_type'><br/>";
+                            echo "<br/><option value='经典著作'>经典著作</option>
+                                    <option value='社会科学-政治法律'>社会科学-政治法律</option>
+                                    <option value='军事科学-财经管理'>军事科学-财经管理</option>
+                                    <option value='历史地理-文化教育'>历史地理-文化教育</option>
+                                    <option value='小中教育-语言文字'>小中教育-语言文字</option>
+                                    <option value='中外文学'>中外文学</option>
+                                    <option value='音乐-美术-雕塑'>音乐-美术-雕塑</option>
+                                    <option value='书法艺术'>书法艺术</option>
+                                    <option value='自然科学-医药卫生'>自然科学-医药卫生</option>
+                                    <option value='农业科学-工业技术'>农业科学-工业技术</option>
+                                    <option value='计算机'>计算机</option>
+                                    <option value='建筑工程'>建筑工程</option>
+                                    <option value='休闲娱乐'>休闲娱乐</option>
+                                    <option value='少儿读物'>少儿读物</option>
+                                    <option value='教材教辅'>教材教辅</option>        
+                            </select><br/>";
+
+                            echo "<br/><p>图书作者/编者</p>";
+                            echo "<br/><input type='text' name='mod_author' class='form-control' style='width: auto' value='{$book_info_row['author']}'><br/>";
+                            echo "<p>图书出版商</p>";
+                            echo "<input type='text' name='mod_publisher' class='form-control' style='width: auto' value='{$book_info_row['publisher']}'><br/>";
+                            echo "<p>图书ISBN</p>";
+                            echo "<input type='number' name='mod_isbn' class='form-control' style='width: auto' value='{$book_info_row['isbn']}'><br/>";
+                            echo "<p>图书价格</p>";
+                            echo "<input type='number' name='mod_price' class='form-control' style='width: auto' value='{$book_info_row['price']}'><br/>";
+                            echo "<p>图书页数</p>";
+                            echo "<input type='number' name='mod_page' class='form-control' style='width: auto' value='{$book_info_row['page']}'><br/>";
+                            echo "<div><input type='submit' class='btn btn-success' name='update' value='确定'><button class='btn btn-primary' data-dismiss='modal'>取消</button></div>";
+                            //echo "<br/><div><input type='submit' name='submit' class='btn btn-primary' value='确定'><a href='index.php' class='btn btn-danger'>取消</a></div></form>";
+                            if (isset($_POST['update'])){
+                                if ($_POST['mod_name'] == ''){
+                                    echo "<script>alert('图书名称为空')</script>";
+                                }elseif ($_POST['mod_author'] == ''){
+                                    echo "<script>alert('作者名称为空')</script>";
+                                }elseif ($_POST['mod_publisher'] == ''){
+                                    echo "<script>alert('出版商为空')</script>";
+                                }elseif ($_POST['mod_isbn'] == ''){
+                                    echo "<script>alert('ISBN为空')</script>";
+                                }elseif ($_POST['mod_price'] == ''){
+                                    echo "<script>alert('图书价格为空')</script>";
+                                }else{
+                                    $update=mysqli_query($link,"update `lms_books` set `name`='{$_POST['mod_name']}',`type`='{$_POST['mod_type']}',`author`='{$_POST['mod_author']}',`isbn`='{$_POST['mod_isbn']}',`publisher`='{$_POST['mod_publisher']}',`price`='{$_POST['mod_price']}',`page`='{$_POST['mod_page']}' where `lms_books`.`id`='{$book_info_row['id']}'");
+                                    if (!$update){
+                                        echo "<script>alert('修改图书信息失败')</script>";
+                                    }else{
+                                        echo "<script>alert('修改图书信息成功')</script>";
+                                    }
+
+                                }
+                            }
+                        ?>
+                    </form>
+                </div><!--modal-body,弹出层主体区域-->
+            </div>
+        </div>
+    </div>
+
 
 </body>
 </html>
