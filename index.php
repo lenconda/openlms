@@ -30,7 +30,7 @@
                 <?php
                     include "config/config_inc.php";
                     mysqli_query($link,"set NAMES 'UTF8'");
-                    $books=mysqli_query($link,"select * from `lms_books`");
+                    $books=mysqli_query($link,"select * from `lms_books` order by `borrow` desc");
                     echo "<br/><table class='table'>";     //使用表格格式化数据
                     echo "<tr><th>ID</th><th>名称</th><th>类型</th><th>作者</th><th>ISBN</th><th>出版商</th><th>价格</th><th>页数</th><th>入库时间</th><th>借阅次数</th><th>操作</th></tr>";
                     while ($books_row=mysqli_fetch_array($books)){
@@ -45,7 +45,7 @@
                         echo "<td>".$books_row['page']."</td>";
                         echo "<td>".$books_row['intime']."</td>";
                         echo "<td>".$books_row['borrow']."</td>";
-                        echo "<td><form method='get' action='borrow.php'><button class='btn btn-primary' type='submit' name='book_id' value='{$books_row['id']}'>借出</button></td>";
+                        echo "<td><div><form method='get' action='modify.php'><button class='btn btn-success' type='submit' name='book_id' value='{$books_row['id']}'>修改信息</button></form><form method='get' action='borrow.php'><button class='btn btn-primary' type='submit' name='book_id' value='{$books_row['id']}'>借出</button></form></div></td>";
                         echo "</tr>";
                     }
 

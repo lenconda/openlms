@@ -57,6 +57,11 @@
                                 }elseif ($_POST['return_time'] == ''){
                                     echo "<script>alert('请选择归还日期！')</script>";
                                 }else{
+                                    //建立一个变量计算并存放新的借阅次数
+                                    $br_time=$book_info_row['borrow'] + 1;
+                                    //更新lms_books表中的borrow字段
+                                    $update_info=mysqli_query($link,"update `lms_books` set `borrow`='{$br_time}'");
+                                    //新建图书借阅记录
                                     $borrow=mysqli_query($link,"INSERT INTO `lms_borrow` (`book_name`, `book_isbn`, `stu_name`, `stu_id`, `borrow_time`, `return_time`, `if_return`) VALUES ('{$book_info_row['name']}', '{$book_info_row['isbn']}', '{$_POST['stu_name']}', '{$_POST['stu_id']}', '{$borrow_date}', '{$_POST['return_time']}', '1')");
                                     if (!$borrow){
                                         echo "<script>alert('借出失败')</script>";
