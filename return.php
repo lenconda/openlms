@@ -82,7 +82,8 @@
                         echo "<h5>借阅人：  ".$return_row['stu_name']."</h5>";
                         echo "<div><form method='post'><input type='hidden' name='borrow_id' value='{$return_row['id']}'><input type='submit' class='btn btn-success' name='return' value='确定'></form><button class='btn btn-primary' data-dismiss='modal'>取消</button></div>";
                         if (isset($_POST['return'])){
-                            $return_act=mysqli_query($link,"update `lms_borrow` set `if_return`='0' where `id`={$_POST['borrow_id']}");
+                            $today=date("Y-m-d",time());
+                            $return_act=mysqli_query($link,"update `lms_borrow` set `if_return`='0',`return_time`='{$today}' where `id`={$_POST['borrow_id']}");
                             if (!$return_act){
                                 echo "<script>alert('还书失败')</script>";
                             }else{

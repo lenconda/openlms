@@ -30,11 +30,15 @@
                     session_start();
                     $_SESSION['Admin']='0';//判断身份
                     $_SESSION['UID']=$identity_row['id'];//设置一个全局变量存储用户ID
+                    $_SESSION['IDCARD']=$identity_row['id_card'];
+                    $_SESSION['NAME']=$identity_row['name'];
                     echo "<script>window.location.href='index.php'</script>";//跳转到管理员界面
                 }else{
                     session_start();
                     $_SESSION['Admin']='1';//判断身份
                     $_SESSION['UID']=$identity_row['id'];//设置一个全局变量存储用户ID
+                    $_SESSION['IDCARD']=$identity_row['id_card'];
+                    $_SESSION['NAME']=$identity_row['name'];
                     echo "<script>window.location.href='profile/index.php'</script>";//跳转到用户界面
                 }
             }else{
