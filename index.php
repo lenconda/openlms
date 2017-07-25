@@ -16,10 +16,10 @@
       <script src="js/jquery-1.9.1.js"></script>
       <script src="js/bootstrap.js"></script>
       <script src="js/bootstrap-datetimepicker.js"></script>
-    <title>图书管理系统</title>
-    <?php
+      <title>图书管理系统</title>
+      <?php
         include "config/config_inc.php";
-    ?>
+      ?>
   </head>
   <body>
         <?php
