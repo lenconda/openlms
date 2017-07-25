@@ -58,3 +58,6 @@
         </div>
     </div>
 </body>
+<?php include "assets/footer.php";?>
+
+</html>
