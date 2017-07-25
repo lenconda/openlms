@@ -18,7 +18,15 @@
       <script src="js/bootstrap-datetimepicker.js"></script>
       <title>图书管理系统</title>
       <?php
-        include "config/config_inc.php";
+          include "config/config_inc.php";
+          session_start();
+          if ($_SESSION['Admin'] == '1'){
+              echo "<script>window.location.href='profile/index.php'</script>";
+          }elseif ($_SESSION['Admin'] == '0'){
+
+          }else{
+              echo "<script>window.location.href='login.php'</script>";
+          }
       ?>
   </head>
   <body>
