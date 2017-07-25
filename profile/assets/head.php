@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="../reader.php">个人中心</a>
+            <a class="navbar-brand" href="../index.php">个人中心</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->

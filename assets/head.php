@@ -56,13 +56,12 @@
                             $admin_info_row=mysqli_fetch_array($admin_info);
                             echo "<input type='password' style='width: auto' name='oldpw' class='form-control' placeholder='输入原密码'><br/>";
                             echo "<input type='password' style='width: auto' name='newpw' class='form-control' placeholder='输入新密码'><br/>";
-                            echo "<input type='password' style='width: auto' name='confim' class='form-control' placeholder='确认新密码'><br/>";
-                            echo "<input type='hidden' name='br_book' value='{$admin_info_row['id']}'>";
+                            echo "<input type='password' style='width: auto' name='confirm' class='form-control' placeholder='确认新密码'><br/>";
                             echo "<br/><div><input type='submit' name='modpw' class='btn btn-primary' value='确定'><a data-dismiss='modal' class='btn btn-danger'>取消</a></div>";
                             if (isset($_POST['modpw'])){
                                 if ($_POST['oldpw'] == ''){
                                     echo "<script>alert('未输入原密码')</script>";
-                                }elseif($_POST['oldpw'] != $modpw_act_row['password']){
+                                }elseif($_POST['oldpw'] != $admin_info_row['password']){
                                     echo "<script>alert('原密码输入错误')</script>";
                                 }elseif($_POST['newpw'] == ''){
                                     echo "<script>alert('未输入新密码')</script>";
@@ -76,7 +75,7 @@
                                         echo "<script>alert('修改密码失败')</script>";
                                     }else{
                                         echo "<script>alert('修改密码成功')</script>";
-                                        echo "<script>window.location.href='../jump.php?jump=index.php'</script>";
+                                        echo "<script>window.location.href='logout.php?action=logout'</script>";
                                     }
                                 }
                             }
@@ -97,32 +96,33 @@
                 <div class="modal-body">
                     <form method="post">
                         <?php
-                        $update_act=mysqli_query($link,"select * from `lms_user` where `id`='{$_SESSION['UID']}'");
-                        $update_act_row=mysqli_fetch_array($update_act);
-                        echo "<p>姓名</p><br/>";
-                        echo "<input name='stu_name' class='form-control' type='text' style='width: auto' value='{$update_act_row['name']}'><br/>";
-                        echo "<p>学号/工号</p><br/>";
-                        echo "<input name='gen_id' class='form-control' type='text' style='width: auto' value='{$update_act_row['gen_id']}'><br/>";
-                        echo "<p>身份证号</p><br/>";
-                        echo "<input name='id_card' class='form-control' type='text' style='width: auto' value='{$update_act_row['id_card']}'><br/>";
-                        echo "<div><input type='submit' name='update' value='确定' class='btn btn-danger'><button class='btn btn-primary' data-dismiss='modal'>取消</button></div>";
-                        if (isset($_POST['update'])){
-                            if ($_POST['name'] == ''){
-                                echo "<script>alert('未填写姓名')</script>";
-                            }elseif($_POST['gen_id'] == ''){
-                                echo "<script>alert('未填写学号/工号')</script>";
-                            }elseif($_POST['id_card'] == ''){
-                                echo "<script>alert('未填写姓名')</script>";
-                            }else{
-                                $modify=mysqli_query($link,"UPDATE `lms_user` SET `name`='{$_POST['stu_name']}', `id_card` = '{$_POST['id_card']}', `gen_id` = '{$_POST['gen_id']}' WHERE `lms_user`.`id` = '{$_SESSION['UID']}'");
-                                if (!$modify){
-                                    echo "<script>alert('修改失败')</script>";
+                            session_start();
+                            $update_act=mysqli_query($link,"select * from `lms_user` where `id`='{$_SESSION['UID']}'");
+                            $update_act_row=mysqli_fetch_array($update_act);
+                            echo "<p>姓名</p><br/>";
+                            echo "<input name='stu_name' class='form-control' type='text' style='width: auto' value='{$update_act_row['name']}'><br/>";
+                            echo "<p>学号/工号</p><br/>";
+                            echo "<input name='gen_id' class='form-control' type='text' style='width: auto' value='{$update_act_row['gen_id']}'><br/>";
+                            echo "<p>身份证号</p><br/>";
+                            echo "<input name='id_card' class='form-control' type='text' style='width: auto' value='{$update_act_row['id_card']}'><br/>";
+                            echo "<div><input type='submit' name='update' value='确定' class='btn btn-danger'><button class='btn btn-primary' data-dismiss='modal'>取消</button></div>";
+                            if (isset($_POST['update'])){
+                                if ($_POST['stu_name'] == ''){
+                                    echo "<script>alert('未填写姓名')</script>";
+                                }elseif($_POST['gen_id'] == ''){
+                                    echo "<script>alert('未填写学号/工号')</script>";
+                                }elseif($_POST['id_card'] == ''){
+                                    echo "<script>alert('未填写身份证号')</script>";
                                 }else{
-                                    echo "<script>alert('修改成功')</script>";
-                                    echo "<script>window.location.href='../jump.php?jump=index.php'</script>";
+                                    $modify=mysqli_query($link,"UPDATE `lms_user` SET `name`='{$_POST['stu_name']}', `id_card` = '{$_POST['id_card']}', `gen_id` = '{$_POST['gen_id']}' WHERE `lms_user`.`id` = '{$_SESSION['UID']}'");
+                                    if (!$modify){
+                                        echo "<script>alert('修改失败')</script>";
+                                    }else{
+                                        echo "<script>alert('修改成功')</script>";
+                                        echo "<script>window.location.href='jump.php?jump=index.php'</script>";
+                                    }
                                 }
                             }
-                        }
                         ?>
                     </form>
                 </div><!--modal-body,弹出层主体区域-->

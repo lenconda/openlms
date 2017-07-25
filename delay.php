@@ -43,7 +43,7 @@
                 mysqli_query($link,"set NAMES 'UTF8'");
                 $delayed=mysqli_query($link,"select * from `lms_delay` order by `passed`");
                 echo "<br/><table class='table'>";     //使用表格格式化数据
-                echo "<tr><th>申请序号</th><th>图书名称</th><th>出版商</th><th>申请人姓名</th><th>身份证号</th><th>借阅时间</th><th>延迟到</th><th>操作</th></tr>";
+                echo "<tr><th>申请序号</th><th>图书名称</th><th>出版商</th><th>申请人姓名</th><th>身份证号</th><th>延迟到</th><th>操作</th></tr>";
                 while ($delayed_row=mysqli_fetch_array($delayed)){
                     echo "<tr>";
                     echo "<td>".$delayed_row['id']."</td>";
@@ -52,8 +52,12 @@
                     echo "<td>".$delayed_row['applicant_name']."</td>";
                     echo "<td>".$delayed_row['applicant_id']."</td>";
                     echo "<td>".$delayed_row['return_time']."</td>";
-                    echo "<td><div><form method='get' action='#'><button name='rl_book_id' class='btn btn-primary' data-toggle='modal' data-target='.myModal1' value='{$delayed_row['id']}'>批准</button></form></div></td>";
-                    echo "</tr>";
+                    if ($delayed_row['passed'] == '1') {
+                        echo "<td><div><form method='get' action='#'><button name='rl_book_id' class='btn btn-primary' data-toggle='modal' data-target='.myModal1' value='{$delayed_row['id']}'>批准</button></form></div></td>";
+                    }else{
+                        echo "<td>已批准</td>";
+                    }
+                    echo "</tr></table>";
                 }
             ?>
             <!--<form action="borrow.php" method="get" target="_blank"><button class="btn btn-danger" type="submit">借出</button></form>-->
@@ -70,12 +74,12 @@
                 </div><!--modal-header,弹出层头部区域-->
                 <div class="modal-body">
                     <?php
-                        $approve=mysqli_query($link,"select * from `lms_relay` where `id`='{$_GET['rl_book_id']}'");
+                        $approve=mysqli_query($link,"select * from `lms_delay` where `id`='{$_GET['rl_book_id']}'");
                         $approve_row=mysqli_fetch_array($approve);
                         echo "<h5 align='center' style='color: red'>请注意，此操作不可逆！</h5>";
                         echo "<div><form method='post'><input type='hidden' name='approve_id' value='{$approve_row['id']}'><input type='submit' class='btn btn-danger' name='approval' value='确定'></form><button class='btn btn-primary' data-dismiss='modal'>取消</button></div>";
                         if (isset($_POST['approval'])){
-                            $approve_act_borrow=mysqli_query($link,"update `lms_borrow` set `return_time`='{$approve_row['return_time']}' where `id`={$_POST['approve_id']}");
+                            $approve_act_borrow=mysqli_query($link,"update `lms_borrow` set `return_time`='{$approve_row['return_time']}' where `id`={$approve_row['book_id']}");
                             $approve_act_delay=mysqli_query($link,"update `lms_delay` set `passed`='0' where `id`={$_POST['approve_id']}");
                             if (!$approve_act_borrow or !$approve_act_delay){
                                 echo "<script>alert('操作失败')</script>";

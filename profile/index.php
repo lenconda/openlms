@@ -72,10 +72,9 @@
                                 echo "<td>".$borrowed_row['book_isbn']."</td>";
                                 echo "<td>".$borrowed_row['borrow_time']."</td>";
                                 echo "<td>".$borrowed_row['return_time']."</td>";
-                                echo "<td><button name='delay' class='btn btn-danger' data-toggle='modal' data-target='.myModal_delay' value='{$borrowed_row['id']}'>续借</button></td>";
+                                echo "<td><div><form method='get' action='#'><button name='delay' class='btn btn-danger' data-toggle='modal' data-target='.myModal_delay' value='{$borrowed_row['id']}'>续借</button></form></div></td>";
                                 }
-                                echo "</tr>";
-                            echo "</table>";
+                                echo "</tr></table>";
                         ?>
                     </div>
 
@@ -104,10 +103,11 @@
                             mysqli_query($link,"set NAMES 'UTF8'");
                             $delayed=mysqli_query($link,"select * from `lms_delay` where `applicant_id` = '{$_SESSION['IDCARD']}'");
                             echo "<br/><table class='table'>";     //使用表格格式化数据
-                            echo "<tr><th>申请序号</th><th>书名</th><th>出版商</th><th>迄</th><th>状态</th></tr>";
-                            while ($delayed_row=mysqli_fetch_array($read_admin)){
+                            echo "<tr><th>申请序号</th><th>借阅序号</th><th>书名</th><th>出版商</th><th>迄</th><th>状态</th></tr>";
+                            while ($delayed_row=mysqli_fetch_array($delayed)){
                                 echo "<tr>";
                                 echo "<td>".$delayed_row['id']."</td>";
+                                echo "<td>".$delayed_row['book_id']."</td>";
                                 echo "<td>".$delayed_row['book_name']."</td>";
                                 echo "<td>".$delayed_row['book_publisher']."</td>";
                                 echo "<td>".$delayed_row['return_time']."</td>";
@@ -150,7 +150,7 @@
                                 echo "<input name='id_card' class='form-control' type='text' style='width: auto' value='{$update_act_row['id_card']}'><br/>";
                                 echo "<div><input type='hidden' name='update_id' value='{$_GET['updateinfo']}'><input type='submit' name='submit' value='确定' class='btn btn-danger'><button class='btn btn-primary' data-dismiss='modal'>取消</button></div>";
                                 if (isset($_POST['submit'])){
-                                    if ($_POST['name'] == ''){
+                                    if ($_POST['stu_name'] == ''){
                                         echo "<script>alert('未填写姓名')</script>";
                                     }elseif($_POST['gen_id'] == ''){
                                         echo "<script>alert('未填写学号/工号')</script>";
@@ -183,13 +183,14 @@
                     <div class="modal-body">
                         <form method="post">
                             <?php
-                                $delay_info=mysqli_query($link,"select * from `lms_borrow` where `{$_GET['delay']}`");
-                                $delay_info_row=mysqli_fetch_array($delay_info);
+                                mysqli_query($link,"set NAMES 'UTF8'");
                                 echo "<input class='form_datetime form-control' type='text' style='width: auto' readonly name='return_time' value='{$delay_info_row['return_time']}'><br/>";
                                 echo "<script type='text/javascript'>$('.form_datetime').datetimepicker({format: 'yyyy-mm-dd',autoclose: true,todayBtn: true,todayHighlight: true,showMeridian: true,pickerPosition: 'bottom-left',startView: 2,minView: 2}); </script>";
                                 echo "<div><input type='hidden' name='delay_id' value='{$_GET['delay']}'><input type='submit' name='delay' value='确定' class='btn btn-danger'><button class='btn btn-primary' data-dismiss='modal'>取消</button></div>";
                                 if (isset($_POST['delay'])){
-                                    $delay_act=mysqli_query($link,"INSERT INTO `lms_delay` (`id`, `book_name`, `book_publisher`, `applicant_name`, `applicant_id`, `return_time`, `passed`) VALUES (NULL, '{$delay_info_row['book_name']}', '{$delay_info_row['book_publisher']}', '{$delay_info_row['stu_name']}', '{$delay_info_row['stu_id']}', '{$_POST['return_time']}', '1')");
+                                    $delay_info=mysqli_query($link,"select * from `lms_borrow` where `id` = '{$_POST['delay_id']}'");
+                                    $delay_info_row=mysqli_fetch_array($delay_info);
+                                    $delay_act=mysqli_query($link,"INSERT INTO `lms_delay` (`id`, `book_name`, `book_id`, `book_publisher`, `applicant_name`, `applicant_id`, `return_time`, `passed`) VALUES (NULL, '{$delay_info_row['book_name']}', '{$delay_info_row['id']}', '{$delay_info_row['book_publisher']}', '{$delay_info_row['stu_name']}', '{$delay_info_row['stu_id']}', '{$_POST['return_time']}', '1')");
 
                                     /* ------------------------------------------------------------------------------------- */
                                     //$delay_act=mysqli_query($link,"update `lms_borrow` set `return_time` = '{$_POST['return_time']}' where `id` = '{$delay_info_row['id']}'");
@@ -243,7 +244,7 @@
                                         echo "<script>alert('修改密码失败')</script>";
                                     }else{
                                         echo "<script>alert('修改密码成功')</script>";
-                                        echo "<script>window.location.href='../jump.php?jump=profile/index.php'</script>";
+                                        echo "<script>window.location.href='../logout.php?action=logout'</script>";
                                     }
                                 }
                             }
