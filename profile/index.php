@@ -27,7 +27,6 @@
           }else{
               echo "<script>window.location.href='../login.php'</script>";
           }
-
       ?>
   </head>
   <body>
@@ -130,6 +129,7 @@
                 <script src="../js/modalEffects.js"></script>
             </div>
         </div>
+
         <div class="modal fade myModal1"><!--modal,弹出层父级,fade使弹出层有一个运动过程-->
             <div class="modal-dialog"><!--modal-dialog,弹出层-->
                 <div class="modal-content"><!--modal-content,弹出层内容区域-->
@@ -209,78 +209,46 @@
         </div>
 
 
-        <div class="modal fade myModal2"><!--modal,弹出层父级,fade使弹出层有一个运动过程-->
+
+        <div class="modal fade myModal1_pw"><!--modal,弹出层父级,fade使弹出层有一个运动过程-->
             <div class="modal-dialog"><!--modal-dialog,弹出层-->
                 <div class="modal-content"><!--modal-content,弹出层内容区域-->
                     <div class="modal-header">
                         <button class="close" data-dismiss="modal">×</button><!--将关闭按钮放在标题前面可以使按钮位于右上角-->
-                        <h4>添加管理员</h4>
+                        <h4>修改密码</h4>
                     </div><!--modal-header,弹出层头部区域-->
                     <div class="modal-body">
                         <form method="post">
-                            <input name="stu_name" type="text" style="width: auto" class="form-control" placeholder="请输入姓名"><br/>
-                            <input name="gen_id" type="text" style="width: auto" class="form-control" placeholder="请输入学号/工号"><br/>
-                            <input name="id_card" type="text" style="width: auto" class="form-control" placeholder="请输入身份证号"><br/>
-                            <input name="pw" type="password" style="width: auto" class="form-control" placeholder="请输入密码"><br/>
-                            <input name="re_pw" type="password" style="width: auto" class="form-control" placeholder="请再次输入密码"><br/>
-                            <div><br/><input type="submit" class="btn btn-success" name="add_admin" value="确定"><button class="btn btn-primary" data-dismiss="modal">取消</button></div><!--data-dismiss="modal"点击按钮之后可以关闭窗口-->
+                            <?php
+                            $modpw_act=mysqli_query($link,"select * from `lms_user` where `id`='{$_GET['updatepw']}'");
+                            $modpw_act_row=mysqli_fetch_array($modpw_act);
+                            echo "<input name='oldpw' class='form-control' type='password' style='width: auto' placeholder='输入原密码'><br/>";
+                            echo "<input name='newpw' class='form-control' type='password' style='width: auto' placeholder='输入新密码'><br/>";
+                            echo "<input name='confirm' class='form-control' type='password' style='width: auto' placeholder='确认新密码'><br/>";
+                            echo "<div><input type='hidden' name='modpw_id' value='{$_GET['updatepw']}'><input type='submit' name='modpw' value='确定' class='btn btn-danger'><button class='btn btn-primary' data-dismiss='modal'>取消</button></div>";
+                            if (isset($_POST['modpw'])){
+                                if ($_POST['oldpw'] == ''){
+                                    echo "<script>alert('未输入原密码')</script>";
+                                }elseif($_POST['oldpw'] != $modpw_act_row['password']){
+                                    echo "<script>alert('原密码输入错误')</script>";
+                                }elseif($_POST['newpw'] == ''){
+                                    echo "<script>alert('未输入新密码')</script>";
+                                }elseif ($_POST['confirm'] == ''){
+                                    echo "<script>alert('未确认新密码')</script>";
+                                }elseif($_POST['newpw'] != $_POST['confirm']){
+                                    echo "<script>alert('两次输入密码不一致')</script>";
+                                }else{
+                                    $modpw=mysqli_query($link,"UPDATE `lms_user` SET `password`='{$_POST['newpw']}' WHERE `lms_user`.`id` = '{$_POST['modpw_id']}'");
+                                    if (!$modpw){
+                                        echo "<script>alert('修改密码失败')</script>";
+                                    }else{
+                                        echo "<script>alert('修改密码成功')</script>";
+                                        echo "<script>window.location.href='../jump.php?jump=profile/index.php'</script>";
+                                    }
+                                }
+                            }
+                            ?>
                         </form>
-                        <?php
-                        if (isset($_POST['add_admin'])){
-                            if ($_POST['stu_name'] == ''){
-                                echo "<script>alert('未输入姓名')</script>";
-                            }elseif ($_POST['gen_id'] == ''){
-                                echo "<script>alert('未输入学号/工号')</script>";
-                            }elseif ($_POST['id_card'] == ''){
-                                echo "<script>alert('未输入身份证号')</script>";
-                            }elseif ($_POST['pw'] == ''){
-                                echo "<script>alert('未输入密码')</script>";
-                            }elseif ($_POST['re_pw'] == ''){
-                                echo "<script>alert('未确认密码')</script>";
-                            }elseif ($_POST['pw'] != $_POST['re_pw']){
-                                echo "<script>alert('两次输入密码不相符')</script>";
-                            }else{
-                                mysqli_query($link,"set NAMES 'UTF8'");
-                                $add_admin=mysqli_query($link,"INSERT INTO `lms_user` (`id`, `name`, `gen_id`, `id_card`, `password`, `admin`) VALUES (NULL, '{$_POST['stu_name']}', '{$_POST['gen_id']}', '{$_POST['id_card']}', '{$_POST['pw']}', '0')");
-                                if (!$add_admin){
-                                    echo "<script>alert('添加管理员失败')</script>";
-                                }else{
-                                    echo "<script>alert('添加管理员成功')</script>";
-                                    echo "<script>window.location.href='jump.php?jump=users.php'</script>";
-                                }
-                            }
-                        }
-                        ?>
-                    </div><!--modal-body,弹出层主体区域-->
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade Blacklist"><!--modal,弹出层父级,fade使弹出层有一个运动过程-->
-            <div class="modal-dialog"><!--modal-dialog,弹出层-->
-                <div class="modal-content"><!--modal-content,弹出层内容区域-->
-                    <div class="modal-header">
-                        <button class="close" data-dismiss="modal">×</button><!--将关闭按钮放在标题前面可以使按钮位于右上角-->
-                        <?php
-                            mysqli_query($link,"set NAMES 'UTF8'");
-                            $bl_info=mysqli_query($link,"select * from `lms_user` where `id`='{$_GET['bl_id']}'");
-                            $bl_info_row=mysqli_fetch_array($bl_info);
-                            echo "<h4>确定要将".$bl_info_row['name']."列入黑名单吗</h4>";
-                            echo "</div>";
-                            echo "<div class=\"modal-body\">";
-                            echo "<h5 style='color: red' align='center'>请注意，此操作不可逆！</h5>";
-                            echo "<div><form method=\"post\"><input type='hidden' value='{$_GET['bl_id']}' name='black_id'><input type='submit' value='确定' name='ok' class='btn btn-danger'><button class=\"btn btn-primary\" data-dismiss=\"modal\">取消</button></form></div>";
-                            echo "</div>";
-                            if (isset($_POST['ok'])){
-                                $blacklist_act=mysqli_query($link,"delete from `lms_user` where `lms_user`.`id`='{$_POST['black_id']}'");
-                                if (!$blacklist_act){
-                                    echo "<script>alert('加入黑名单失败')</script>";
-                                }else{
-                                    echo "<script>alert('加入黑名单成功')</script>";
-                                    echo "<script>window.location.href='jump.php?jump=users.php'</script>";
-                                }
-                            }
-                        ?>
                     </div><!--modal-body,弹出层主体区域-->
                 </div>
             </div>

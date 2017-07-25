@@ -6,6 +6,7 @@
             <a href="return.php" class="list-group-item" style="width: auto">图书归还</a>
             <a href="borrowed.php" class="list-group-item" style="width: auto">借出记录</a>
             <a href="returned.php" class="list-group-item" style="width: auto">归还记录</a>
+            <a href="delay.php" class="list-group-item" style="width: auto">延迟申请</a>
         </div>
 
     </div>

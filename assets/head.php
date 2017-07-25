@@ -29,9 +29,9 @@
                     <ul class="dropdown-menu">
                         <li><a href="book_admin.php">图书管理</a></li>
                         <li><a href="users.php">用户管理</a></li>
-                        <li><a href="#">个人中心</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">账号设置</a></li>
+                        <li><a data-toggle="modal" data-target=".myModal_Modpf">修改信息</a></li>
+                        <li><a data-toggle="modal" data-target=".myModal_Modpw">修改密码</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="logout.php?action=logout">退出登录</a></li>
                     </ul>
@@ -39,4 +39,94 @@
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
+
+    <div class="modal fade myModal_Modpw"><!--modal,弹出层父级,fade使弹出层有一个运动过程-->
+        <div class="modal-dialog"><!--modal-dialog,弹出层-->
+            <div class="modal-content"><!--modal-content,弹出层内容区域-->
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal">×</button><!--将关闭按钮放在标题前面可以使按钮位于右上角-->
+                    <h4>修改信息</h4>
+                </div><!--modal-header,弹出层头部区域-->
+                <div class="modal-body">
+                    <form method="post">
+                        <?php
+                            session_start();
+                            mysqli_query($link,"set NAMES 'UTF8'");
+                            $admin_info=mysqli_query($link,"select * from `lms_user` where `id`='{$_SESSION['UID']}'");
+                            $admin_info_row=mysqli_fetch_array($admin_info);
+                            echo "<input type='password' style='width: auto' name='oldpw' class='form-control' placeholder='输入原密码'><br/>";
+                            echo "<input type='password' style='width: auto' name='newpw' class='form-control' placeholder='输入新密码'><br/>";
+                            echo "<input type='password' style='width: auto' name='confim' class='form-control' placeholder='确认新密码'><br/>";
+                            echo "<input type='hidden' name='br_book' value='{$admin_info_row['id']}'>";
+                            echo "<br/><div><input type='submit' name='modpw' class='btn btn-primary' value='确定'><a data-dismiss='modal' class='btn btn-danger'>取消</a></div>";
+                            if (isset($_POST['modpw'])){
+                                if ($_POST['oldpw'] == ''){
+                                    echo "<script>alert('未输入原密码')</script>";
+                                }elseif($_POST['oldpw'] != $modpw_act_row['password']){
+                                    echo "<script>alert('原密码输入错误')</script>";
+                                }elseif($_POST['newpw'] == ''){
+                                    echo "<script>alert('未输入新密码')</script>";
+                                }elseif ($_POST['confirm'] == ''){
+                                    echo "<script>alert('未确认新密码')</script>";
+                                }elseif($_POST['newpw'] != $_POST['confirm']){
+                                    echo "<script>alert('两次输入密码不一致')</script>";
+                                }else{
+                                    $modpw=mysqli_query($link,"UPDATE `lms_user` SET `password`='{$_POST['newpw']}' WHERE `lms_user`.`id` = '{$_SESSION['UID']}'");
+                                    if (!$modpw){
+                                        echo "<script>alert('修改密码失败')</script>";
+                                    }else{
+                                        echo "<script>alert('修改密码成功')</script>";
+                                        echo "<script>window.location.href='../jump.php?jump=index.php'</script>";
+                                    }
+                                }
+                            }
+                        ?>
+                    </form>
+                </div><!--modal-body,弹出层主体区域-->
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade myModal_Modpf"><!--modal,弹出层父级,fade使弹出层有一个运动过程-->
+        <div class="modal-dialog"><!--modal-dialog,弹出层-->
+            <div class="modal-content"><!--modal-content,弹出层内容区域-->
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal">×</button><!--将关闭按钮放在标题前面可以使按钮位于右上角-->
+                    <h4>修改信息</h4>
+                </div><!--modal-header,弹出层头部区域-->
+                <div class="modal-body">
+                    <form method="post">
+                        <?php
+                        $update_act=mysqli_query($link,"select * from `lms_user` where `id`='{$_SESSION['UID']}'");
+                        $update_act_row=mysqli_fetch_array($update_act);
+                        echo "<p>姓名</p><br/>";
+                        echo "<input name='stu_name' class='form-control' type='text' style='width: auto' value='{$update_act_row['name']}'><br/>";
+                        echo "<p>学号/工号</p><br/>";
+                        echo "<input name='gen_id' class='form-control' type='text' style='width: auto' value='{$update_act_row['gen_id']}'><br/>";
+                        echo "<p>身份证号</p><br/>";
+                        echo "<input name='id_card' class='form-control' type='text' style='width: auto' value='{$update_act_row['id_card']}'><br/>";
+                        echo "<div><input type='submit' name='update' value='确定' class='btn btn-danger'><button class='btn btn-primary' data-dismiss='modal'>取消</button></div>";
+                        if (isset($_POST['update'])){
+                            if ($_POST['name'] == ''){
+                                echo "<script>alert('未填写姓名')</script>";
+                            }elseif($_POST['gen_id'] == ''){
+                                echo "<script>alert('未填写学号/工号')</script>";
+                            }elseif($_POST['id_card'] == ''){
+                                echo "<script>alert('未填写姓名')</script>";
+                            }else{
+                                $modify=mysqli_query($link,"UPDATE `lms_user` SET `name`='{$_POST['stu_name']}', `id_card` = '{$_POST['id_card']}', `gen_id` = '{$_POST['gen_id']}' WHERE `lms_user`.`id` = '{$_SESSION['UID']}'");
+                                if (!$modify){
+                                    echo "<script>alert('修改失败')</script>";
+                                }else{
+                                    echo "<script>alert('修改成功')</script>";
+                                    echo "<script>window.location.href='../jump.php?jump=index.php'</script>";
+                                }
+                            }
+                        }
+                        ?>
+                    </form>
+                </div><!--modal-body,弹出层主体区域-->
+            </div>
+        </div>
+    </div>
 </nav>
