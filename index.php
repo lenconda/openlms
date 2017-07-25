@@ -63,7 +63,7 @@
                 <div class="modal-content"><!--modal-content,弹出层内容区域-->
                     <div class="modal-header">
                         <button class="close" data-dismiss="modal">×</button><!--将关闭按钮放在标题前面可以使按钮位于右上角-->
-                        <h4>添加新的图书</h4>
+                        <h4>图书借阅(借出)</h4>
                     </div><!--modal-header,弹出层头部区域-->
                     <div class="modal-body">
                         <form method="post">
@@ -106,7 +106,7 @@
                                             echo "<script>alert('借出失败')</script>";
                                         }else{
                                             echo "<script>alert('借出成功')</script>";
-                                            echo "<script>window.location.href='index.php'</script>";
+                                            echo "<script>window.location.href='jump.php?jump=index.php'</script>";
                                         }
                                     }
                                 }

@@ -13,16 +13,6 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">管理员选项<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="book_admin.php">图书管理</a></li>
-                        <li><a href="#">读者管理</a></li>
-                        <!--<li role="separator" class="divider"></li>-->
-                    </ul>
-                </li>
-            </ul>
             <form class="navbar-form navbar-left" method="get">
                 <select class="form-control">
                     <option>查询图书</option>
@@ -37,13 +27,13 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">$_SESSION['Name']<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
+                        <li><a href="book_admin.php">图书管理</a></li>
+                        <li><a href="users.php">用户管理</a></li>
+                        <li><a href="#">个人中心</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">账号设置</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><input type="submit" name="test" class="btn btn-danger" value="test"></li>
+                        <li><a href="logout.php?action=logout">退出登录</a></li>
                     </ul>
                 </li>
             </ul>

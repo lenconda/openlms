@@ -78,7 +78,7 @@
                                 echo "<script>alert('还书失败')</script>";
                             }else{
                                 echo "<script>alert('还书成功')</script>";
-                                echo "<script>window.location.href='index.php'</script>";
+                                echo "<script>window.location.href='jump.php?jump=return.php'</script>";
                             }
                         }
                     ?>

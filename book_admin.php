@@ -28,6 +28,7 @@
 
     <div class="col-md-10">
         <div class="row">
+            <h3 align="center">图书管理</h3>
             <div><a href="book_admin.php" class="btn btn-success">刷新</a><button class="btn btn-primary" data-toggle="modal" data-target=".myModal1">添加图书</button></div><br/>
             <?php
                 include "config/config_inc.php";
@@ -104,7 +105,7 @@
                                 echo "<script>alert('添加图书失败')</script>";
                             }else{
                                 echo "<script>alert('添加图书成功')</script>";
-                                echo "<script>window.location.href='index.php'</script>";
+                                echo "<script>window.location.href='jump.php?jump=book_admin.php'</script>";
                             }
                         }
                     ?>
@@ -180,6 +181,7 @@
                                         echo "<script>alert('修改图书信息失败')</script>";
                                     }else{
                                         echo "<script>alert('修改图书信息成功')</script>";
+                                        echo "<script>window.location.href='jump.php?jump=book_admin.php'</script>";
                                     }
 
                                 }
@@ -219,7 +221,7 @@
                             echo "<script>alert('".$del_alert_row['name']."已被成功删除')</script>";
                         }else{
                             echo "<script>alert('".$del_alert_row['name']."删除失败')</script>";
-                            echo "<script>window.location.href='index.php'</script>";
+                            echo "<script>window.location.href='jump.php?jump=book_admin.php'</script>";
                         }
                     }
                     ?>
