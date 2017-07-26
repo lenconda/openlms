@@ -2,7 +2,7 @@
 
 ## Screenshot
 
-  ![picture](http://lenconda.github.io/screenshot.png)
+  ![picture](http://lenconda.github.io/overview.png)
 
 ## Features
   - Add,delete and update books in library;
