@@ -135,7 +135,7 @@ All the data will be written in,no surprise.Notice that DELETE THE DIRECTORY `/d
    
    - The default username and password as following:
    
-   Administrator: login name is `360101300101014816`,password is `openlms123`
+   Administrator: login name is `360101300001014816`,password is `openlms123`
    
    Reader: login name is `36010130011231032X`,password is `openlms123`
    
