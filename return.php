@@ -79,11 +79,11 @@
                         echo "<h5>借阅序号：".$return_row['id']."</h5>";
                         echo "<h5>图书名称：".$return_row['book_name']."</h5>";
                         echo "<h5>出版商：  ".$return_row['book_publisher']."</h5>";
-                        echo "<h5>借阅人：  ".$return_row['stu_name']."</h5>";
-                        echo "<div><form method='post'><input type='hidden' name='borrow_id' value='{$return_row['id']}'><input type='submit' class='btn btn-success' name='return' value='确定'></form><button class='btn btn-primary' data-dismiss='modal'>取消</button></div>";
+                        echo "<h5>借阅人：  ".$return_row['stu_name']."</h5><br/>";
+                        echo "<div><form method='post'><select class='form-control' style='width: auto' name='status'><option value='0'>按时归还</option><option value='2'>逾期归还</option></select><br/><input type='hidden' name='borrow_id' value='{$return_row['id']}'><input type='submit' class='btn btn-success' name='return' value='确定'></form><button class='btn btn-primary' data-dismiss='modal'>取消</button></div>";
                         if (isset($_POST['return'])){
                             $today=date("Y-m-d",time());
-                            $return_act=mysqli_query($link,"update `lms_borrow` set `if_return`='0',`return_time`='{$today}' where `id`={$_POST['borrow_id']}");
+                            $return_act=mysqli_query($link,"update `lms_borrow` set `if_return`='{$_POST['status']}',`return_time`='{$today}' where `id`={$_POST['borrow_id']}");
                             if (!$return_act){
                                 echo "<script>alert('还书失败')</script>";
                             }else{

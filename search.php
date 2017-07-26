@@ -92,7 +92,7 @@
                         }elseif ($_GET['search'] == 'return') {
                             $returned = mysqli_query($link, "select * from `lms_borrow` where (`book_name` like '%{$_GET['object']}%' or `book_isbn` like '%{$_GET['object']}%' or `book_publisher` like '%{$_GET['object']}%' or `stu_name` like '%{$_GET['object']}%' or `stu_id` like '%{$_GET['object']}%') and 'if_return' = '0'");
                             echo "<br/><table class='table'>";     //使用表格格式化数据
-                            echo "<tr><th>借阅单号</th><th>图书名称</th><th>ISBN</th><th>出版商</th><th>借阅人姓名</th><th>身份证号</th><th>借阅时间</th><th>归还时间</th></tr>";
+                            echo "<tr><th>借阅单号</th><th>图书名称</th><th>ISBN</th><th>出版商</th><th>借阅人姓名</th><th>身份证号</th><th>借阅时间</th><th>归还时间</th><th>状态</th></tr>";
                             while ($books_returned = mysqli_fetch_array($returned)) {
                                 echo "<tr>";
                                 echo "<td>" . $books_returned['id'] . "</td>";
@@ -103,6 +103,13 @@
                                 echo "<td>" . $books_returned['stu_id'] . "</td>";
                                 echo "<td>" . $books_returned['borrow_time'] . "</td>";
                                 echo "<td>" . $books_returned['return_time'] . "</td>";
+                                if ($books_returned['if_return'] == '0'){
+                                    echo "<td>已归还</td>";
+                                }elseif ($books_returned['if_return'] == '2'){
+                                    echo "<td>已归还(逾期)</td>";
+                                }else{
+                                    echo "<td>查询失败</td>";
+                                }
                                 echo "</tr>";
                             }
                             echo "</table>";
@@ -159,11 +166,13 @@
                                 echo "<td>" . $reader_borrowed_row['book_publisher'] . "</td>";
                                 echo "<td>" . $reader_borrowed_row['borrow_time'] . "</td>";
                                 echo "<td>" . $reader_borrowed_row['return_time'] . "</td>";
-                                if ($reader_borrowed_row['if_return'] == 1) {
+                                if ($reader_borrowed_row['if_return'] == '1') {
                                     echo "<td>未归还</td>";
-                                } elseif ($reader_borrowed_row['if_return'] == 0) {
+                                } elseif ($reader_borrowed_row['if_return'] == '0') {
                                     echo "<td>已归还</td>";
-                                } else {
+                                } elseif ($reader_borrowed_row['if_return'] == '2') {
+                                    echo "<td>已归还(逾期)</td>";
+                                }else{
                                     echo "<td>查询失败</td>";
                                 }
                                 echo "</tr>";

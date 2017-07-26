@@ -58,12 +58,11 @@
                         echo "<td>未归还</td>";
                     }elseif ($books_borrowed['if_return'] == 0){
                         echo "<td>已归还</td>";
+                    }elseif ($books_borrowed['if_return'] == 2){
+                        echo "<td>已归还(逾期)</td>";
                     }else{
                         echo "<td>查询失败</td>";
                     }
-                    //echo "<td>".$books_borrowed['intime']."</td>";
-                    //echo "<td>".$books_borrowed['borrow']."</td>";
-                    //echo "<td><div><form method='get' action='#'><button name='br_book_id' class='btn btn-primary' data-toggle='modal' data-target='.myModal1' value='{$books_borrowed['id']}'>借出</button></form></div></td>";
                     echo "</tr>";
                 }
             ?>

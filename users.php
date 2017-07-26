@@ -197,9 +197,9 @@
                             $bl_info_row=mysqli_fetch_array($bl_info);
                             echo "<h4>确定要将".$bl_info_row['name']."列入黑名单吗</h4>";
                             echo "</div>";
-                            echo "<div class=\"modal-body\">";
-                            echo "<h5 style='color: red' align='center'>请注意，此操作不可逆！</h5>";
-                            echo "<div><form method=\"post\"><input type='hidden' value='{$_GET['bl_id']}' name='black_id'><input type='submit' value='确定' name='ok' class='btn btn-danger'><button class=\"btn btn-primary\" data-dismiss=\"modal\">取消</button></form></div>";
+                            echo "<div class='modal-body'>";
+                            echo "<h5 style='color: red'>请注意，此操作不可逆！</h5>";
+                            echo "<div><form method='post'><input type='hidden' value='{$_GET['bl_id']}' name='black_id'><input type='submit' value='确定' name='ok' class='btn btn-danger'><button class='btn btn-primary' data-dismiss='modal'>取消</button></form></div>";
                             echo "</div>";
                             if (isset($_POST['ok'])){
                                 $blacklist_act=mysqli_query($link,"delete from `lms_user` where `lms_user`.`id`='{$_POST['black_id']}'");

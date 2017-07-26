@@ -81,9 +81,9 @@
                     <div class="tab-pane fade" id="returned">
                         <?php
                             mysqli_query($link,"set NAMES 'UTF8'");
-                            $returned=mysqli_query($link,"select * from `lms_borrow` where `stu_id` = '{$_SESSION['IDCARD']}' and `if_return` = '0'");
+                            $returned=mysqli_query($link,"select * from `lms_borrow` where `stu_id` = '{$_SESSION['IDCARD']}' and `if_return` = '0' or `if_return` = '2' ");
                             echo "<br/><table class='table'>";     //使用表格格式化数据
-                            echo "<tr><th>借阅单号</th><th>书名</th><th>出版商</th><th>ISBN</th><th>借出日期</th><th>归还日期</th></tr>";
+                            echo "<tr><th>借阅单号</th><th>书名</th><th>出版商</th><th>ISBN</th><th>借出日期</th><th>归还日期</th><th>状态</th></tr>";
                             while ($returned_row=mysqli_fetch_array($returned)){
                                 echo "<tr>";
                                 echo "<td>".$returned_row['id']."</td>";
@@ -92,6 +92,13 @@
                                 echo "<td>".$returned_row['book_isbn']."</td>";
                                 echo "<td>".$returned_row['borrow_time']."</td>";
                                 echo "<td>".$returned_row['return_time']."</td>";
+                                if ($returned_row['if_return'] == '0'){
+                                    echo "<td>已归还</td>";
+                                }elseif ($returned_row){
+                                    echo "<td>已归还(逾期)</td>";
+                                }else{
+                                    echo "<td>查询失败</td>";
+                                }
                                 echo "</tr>";
                             }
                             echo "</table>";
