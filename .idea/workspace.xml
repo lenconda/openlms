@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e7cefb5a-2454-4f11-8cf5-11a172880d66" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/borrowed.php" afterPath="$PROJECT_DIR$/borrowed.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/delay.php" afterPath="$PROJECT_DIR$/delay.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/profile/index.php" afterPath="$PROJECT_DIR$/profile/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/return.php" afterPath="$PROJECT_DIR$/return.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/returned.php" afterPath="$PROJECT_DIR$/returned.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search.php" afterPath="$PROJECT_DIR$/search.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/users.php" afterPath="$PROJECT_DIR$/users.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,7 +17,7 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-512">
+            <state relative-caret-position="140">
               <caret line="7" column="76" lean-forward="false" selection-start-line="7" selection-start-column="76" selection-end-line="7" selection-end-column="76" />
               <folding>
                 <marker date="1500972502709" expanded="true" signature="1763:1788" ph="select * fro... lms_books" />
@@ -45,7 +38,7 @@
       <file leaf-file-name="delay.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/delay.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
+            <state relative-caret-position="1620">
               <caret line="81" column="86" lean-forward="false" selection-start-line="81" selection-start-column="76" selection-end-line="81" selection-end-column="86" />
               <folding>
                 <marker date="1501047842619" expanded="true" signature="1662:1688" ph="select * fro... lms_delay" />
@@ -62,7 +55,7 @@
       <file leaf-file-name="borrowed.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/borrowed.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
+            <state relative-caret-position="860">
               <caret line="43" column="68" lean-forward="false" selection-start-line="43" selection-start-column="58" selection-end-line="43" selection-end-column="68" />
               <folding>
                 <marker date="1501048350397" expanded="true" signature="1660:1712" ph="select * fro... lms_borrow" />
@@ -74,7 +67,7 @@
       <file leaf-file-name="returned.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/returned.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
+            <state relative-caret-position="860">
               <caret line="43" column="68" lean-forward="false" selection-start-line="43" selection-start-column="58" selection-end-line="43" selection-end-column="68" />
               <folding>
                 <marker date="1501048703849" expanded="true" signature="1660:1708" ph="select * fro... lms_borrow" />
@@ -87,7 +80,7 @@
       <file leaf-file-name="book_admin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/book_admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
+            <state relative-caret-position="460">
               <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding>
                 <marker date="1500972502701" expanded="true" signature="1678:1703" ph="select * fro... lms_books" />
@@ -113,11 +106,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="search.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/search.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="156" column="64" lean-forward="true" selection-start-line="156" selection-start-column="64" selection-end-line="156" selection-end-column="64" />
+            <state relative-caret-position="550">
+              <caret line="203" column="65" lean-forward="false" selection-start-line="203" selection-start-column="65" selection-end-line="203" selection-end-column="65" />
               <folding>
                 <marker date="1501049213614" expanded="true" signature="1613:1701" ph="select * fro... lms_books" />
                 <marker date="1501049213614" expanded="true" signature="3336:3401" ph="select * fro... lms_user" />
@@ -151,11 +144,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="return.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="return.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/return.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="82" column="102" lean-forward="false" selection-start-line="82" selection-start-column="102" selection-end-line="82" selection-end-column="102" />
+            <state relative-caret-position="864">
+              <caret line="76" column="43" lean-forward="false" selection-start-line="76" selection-start-column="43" selection-end-line="76" selection-end-column="43" />
               <folding>
                 <marker date="1501049617152" expanded="true" signature="1658:1706" ph="select * fro... lms_borrow" />
                 <marker date="1501049617152" expanded="true" signature="3818:3879" ph="select * fro... lms_borrow" />
@@ -180,7 +173,7 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/profile/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
+            <state relative-caret-position="1260">
               <caret line="63" column="83" lean-forward="false" selection-start-line="63" selection-start-column="73" selection-end-line="63" selection-end-column="83" />
               <folding>
                 <marker date="1501048865370" expanded="true" signature="2233:2291" ph="select * fro... lms_user" />
@@ -217,7 +210,7 @@
       <file leaf-file-name="users.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/users.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
+            <state relative-caret-position="4020">
               <caret line="201" column="239" lean-forward="false" selection-start-line="201" selection-start-column="239" selection-end-line="201" selection-end-column="239" />
               <folding>
                 <marker date="1501047842651" expanded="true" signature="2619:2663" ph="select * fro... lms_user" />
@@ -350,7 +343,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -411,6 +403,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -853,12 +846,13 @@
       <workItem from="1500892024718" duration="7090000" />
       <workItem from="1500947471950" duration="5410000" />
       <workItem from="1500954194452" duration="38773000" />
-      <workItem from="1501047096015" duration="2618000" />
+      <workItem from="1501047096015" duration="3071000" />
+      <workItem from="1501055934887" duration="39000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74503000" />
+    <option name="totallyTimeSpent" value="74995000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
@@ -878,7 +872,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15975676" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16141514" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -949,7 +943,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1403,7 +1396,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1452,7 +1444,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/users.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
+        <state relative-caret-position="4020">
           <caret line="201" column="239" lean-forward="false" selection-start-line="201" selection-start-column="239" selection-end-line="201" selection-end-column="239" />
           <folding>
             <marker date="1501047842651" expanded="true" signature="2619:2663" ph="select * fro... lms_user" />
@@ -1468,7 +1460,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/profile/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
+        <state relative-caret-position="1260">
           <caret line="63" column="83" lean-forward="false" selection-start-line="63" selection-start-column="73" selection-end-line="63" selection-end-column="83" />
           <folding>
             <marker date="1501048865370" expanded="true" signature="2233:2291" ph="select * fro... lms_user" />
@@ -1503,7 +1495,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/book_admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
+        <state relative-caret-position="460">
           <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
             <marker date="1500972502701" expanded="true" signature="1678:1703" ph="select * fro... lms_books" />
@@ -1530,7 +1522,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/borrowed.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
+        <state relative-caret-position="860">
           <caret line="43" column="68" lean-forward="false" selection-start-line="43" selection-start-column="58" selection-end-line="43" selection-end-column="68" />
           <folding>
             <marker date="1501048350397" expanded="true" signature="1660:1712" ph="select * fro... lms_borrow" />
@@ -1540,7 +1532,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/delay.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
+        <state relative-caret-position="1620">
           <caret line="81" column="86" lean-forward="false" selection-start-line="81" selection-start-column="76" selection-end-line="81" selection-end-column="86" />
           <folding>
             <marker date="1501047842619" expanded="true" signature="1662:1688" ph="select * fro... lms_delay" />
@@ -1555,7 +1547,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-512">
+        <state relative-caret-position="140">
           <caret line="7" column="76" lean-forward="false" selection-start-line="7" selection-start-column="76" selection-end-line="7" selection-end-column="76" />
           <folding>
             <marker date="1500972502709" expanded="true" signature="1763:1788" ph="select * fro... lms_books" />
@@ -1574,7 +1566,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/returned.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
+        <state relative-caret-position="860">
           <caret line="43" column="68" lean-forward="false" selection-start-line="43" selection-start-column="58" selection-end-line="43" selection-end-column="68" />
           <folding>
             <marker date="1501048703849" expanded="true" signature="1660:1708" ph="select * fro... lms_borrow" />
@@ -1583,10 +1575,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/return.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="76" column="43" lean-forward="false" selection-start-line="76" selection-start-column="43" selection-end-line="76" selection-end-column="43" />
+          <folding>
+            <marker date="1501049617152" expanded="true" signature="1658:1706" ph="select * fro... lms_borrow" />
+            <marker date="1501049617152" expanded="true" signature="3818:3879" ph="select * fro... lms_borrow" />
+            <marker date="1501049617152" expanded="true" signature="4343:4354" ph="..." />
+            <marker date="1501049617152" expanded="true" signature="4833:4926" ph="update `lms_... " />
+            <marker date="1501049617152" expanded="true" signature="4833:4947" ph="update `lms_... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/search.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="156" column="64" lean-forward="true" selection-start-line="156" selection-start-column="64" selection-end-line="156" selection-end-column="64" />
+        <state relative-caret-position="550">
+          <caret line="203" column="65" lean-forward="false" selection-start-line="203" selection-start-column="65" selection-end-line="203" selection-end-column="65" />
           <folding>
             <marker date="1501049213614" expanded="true" signature="1613:1701" ph="select * fro... lms_books" />
             <marker date="1501049213614" expanded="true" signature="3336:3401" ph="select * fro... lms_user" />
@@ -1615,20 +1621,6 @@
             <marker date="1501049213614" expanded="true" signature="13865:14066" ph="select * fro... lms_borrow" />
             <marker date="1501049213614" expanded="true" signature="15208:15440" ph="select * fro... lms_delay" />
             <marker date="1501049213614" expanded="true" signature="15208:15464" ph="select * fro... lms_delay" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/return.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="82" column="102" lean-forward="false" selection-start-line="82" selection-start-column="102" selection-end-line="82" selection-end-column="102" />
-          <folding>
-            <marker date="1501049617152" expanded="true" signature="1658:1706" ph="select * fro... lms_borrow" />
-            <marker date="1501049617152" expanded="true" signature="3818:3879" ph="select * fro... lms_borrow" />
-            <marker date="1501049617152" expanded="true" signature="4343:4354" ph="..." />
-            <marker date="1501049617152" expanded="true" signature="4833:4926" ph="update `lms_... " />
-            <marker date="1501049617152" expanded="true" signature="4833:4947" ph="update `lms_... " />
           </folding>
         </state>
       </provider>
