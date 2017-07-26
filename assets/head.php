@@ -13,13 +13,17 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <form class="navbar-form navbar-left" method="get">
-                <select class="form-control">
-                    <option>查询图书</option>
-                    <option>查询读者</option>
+            <form class="navbar-form navbar-left" method="get" action="search.php">
+                <select class="form-control" name="search">
+                    <option value="books">按图书名称</option>
+                    <option value="readers">按读者</option>
+                    <option value="borrow">按借出</option>
+                    <option value="return">按归还</option>
+                    <option value="delay">按延迟</option>
                 </select>
                 <div class="form-group">
-                    <input type="text" class="form-control" name="search" placeholder="查询内容">
+                    <input type="hidden" value="0" name="forward">
+                    <input type="text" class="form-control" name="object" placeholder="查询内容">
                 </div>
                 <button type="submit" class="btn btn-default">查询</button>
             </form>

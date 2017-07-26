@@ -10,9 +10,20 @@
             </button>
             <a class="navbar-brand" href="../index.php">个人中心</a>
         </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <form class="navbar-form navbar-left" method="get" action="../search.php">
+                <select class="form-control" name="search">
+                    <option value="books">按图书名称</option>
+                    <option value="borrowed">按借入</option>
+                    <option value="returned">按归还</option>
+                    <option value="delay">按延迟</option>
+                </select>
+                <div class="form-group">
+                    <input type="hidden" value="1" name="forward">
+                    <input type="text" class="form-control" name="object" placeholder="查询内容">
+                </div>
+                <button type="submit" class="btn btn-default">查询</button>
+            </form>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php session_start(); echo $_SESSION['NAME'];?><span class="caret"></span></a>
