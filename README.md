@@ -1,5 +1,5 @@
 # OpenLMS
-------------------------------------
+
 ## Features
   - Add,delete and update books in library;
   - Add,blacklist and update user info;
