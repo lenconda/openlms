@@ -43,10 +43,11 @@
                 mysqli_query($link,"set NAMES 'UTF8'");
                 $delayed=mysqli_query($link,"select * from `lms_delay` order by `passed`");
                 echo "<br/><table class='table'>";     //使用表格格式化数据
-                echo "<tr><th>申请序号</th><th>图书名称</th><th>出版商</th><th>申请人姓名</th><th>身份证号</th><th>延迟到</th><th>操作</th></tr>";
+                echo "<tr><th>申请序号</th><th>借阅序号</th><th>图书名称</th><th>出版商</th><th>申请人姓名</th><th>身份证号</th><th>延迟到</th><th>操作</th></tr>";
                 while ($delayed_row=mysqli_fetch_array($delayed)){
                     echo "<tr>";
                     echo "<td>".$delayed_row['id']."</td>";
+                    echo "<td>".$delayed_row['book_id']."</td>";
                     echo "<td>".$delayed_row['book_name']."</td>";
                     echo "<td>".$delayed_row['book_publisher']."</td>";
                     echo "<td>".$delayed_row['applicant_name']."</td>";
