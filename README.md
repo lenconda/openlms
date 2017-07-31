@@ -1,8 +1,8 @@
 # OpenLMS
 
-## Screenshot
+## Screenshots
 
-  ![screenshot1](http://lanconda.github.io/screenshot1.png)
+  ![screenshot1](http://lanconda.github.io/screenshot.png)
   ![screenshot2](http://lenconda.github.io/screenshot2.png)
 
 ## Features
