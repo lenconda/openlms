@@ -106,7 +106,7 @@
                             <input name="id_card" type="text" style="width: auto" class="form-control" placeholder="请输入身份证号"><br/>
                             <input name="pw" type="password" style="width: auto" class="form-control" placeholder="请输入密码"><br/>
                             <input name="re_pw" type="password" style="width: auto" class="form-control" placeholder="请再次输入密码"><br/>
-                            <div><br/><input type="submit" class="btn btn-success" name="add_reader" value="确定"><button class="btn btn-primary" data-dismiss="modal">取消</button></div><!--data-dismiss="modal"点击按钮之后可以关闭窗口-->
+                            <div class="modal-footer"><input type="submit" class="btn btn-primary" name="add_reader" value="确定"><button class="btn btn-default" data-dismiss="modal">取消</button></div><!--data-dismiss="modal"点击按钮之后可以关闭窗口-->
                         </form>
                         <?php
                             if (isset($_POST['add_reader'])){
@@ -153,7 +153,7 @@
                             <input name="id_card" type="text" style="width: auto" class="form-control" placeholder="请输入身份证号"><br/>
                             <input name="pw" type="password" style="width: auto" class="form-control" placeholder="请输入密码"><br/>
                             <input name="re_pw" type="password" style="width: auto" class="form-control" placeholder="请再次输入密码"><br/>
-                            <div><br/><input type="submit" class="btn btn-success" name="add_admin" value="确定"><button class="btn btn-primary" data-dismiss="modal">取消</button></div><!--data-dismiss="modal"点击按钮之后可以关闭窗口-->
+                            <div class="modal-footer"><input type="submit" class="btn btn-primary" name="add_admin" value="确定"><button class="btn btn-primary" data-dismiss="modal">取消</button></div><!--data-dismiss="modal"点击按钮之后可以关闭窗口-->
                         </form>
                         <?php
                         if (isset($_POST['add_admin'])){
@@ -199,7 +199,7 @@
                             echo "</div>";
                             echo "<div class='modal-body'>";
                             echo "<h5 style='color: red'>请注意，此操作不可逆！</h5>";
-                            echo "<div><form method='post'><input type='hidden' value='{$_GET['bl_id']}' name='black_id'><input type='submit' value='确定' name='ok' class='btn btn-danger'><button class='btn btn-primary' data-dismiss='modal'>取消</button></form></div>";
+                            echo "<div class='modal-footer'><form method='post'><input type='hidden' value='{$_GET['bl_id']}' name='black_id'><input type='submit' value='确定' name='ok' class='btn btn-danger'><button class='btn btn-primary' data-dismiss='modal'>取消</button></form></div>";
                             echo "</div>";
                             if (isset($_POST['ok'])){
                                 $blacklist_act=mysqli_query($link,"delete from `lms_user` where `lms_user`.`id`='{$_POST['black_id']}'");

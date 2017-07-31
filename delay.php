@@ -78,7 +78,7 @@
                         $approve=mysqli_query($link,"select * from `lms_delay` where `id`='{$_GET['rl_book_id']}'");
                         $approve_row=mysqli_fetch_array($approve);
                         echo "<h5 style='color: red'>请注意，此操作不可逆！</h5>";
-                        echo "<div><form method='post'><input type='hidden' name='approve_id' value='{$approve_row['id']}'><input type='submit' class='btn btn-danger' name='approval' value='确定'></form><button class='btn btn-primary' data-dismiss='modal'>取消</button></div>";
+                        echo "<div class='modal-footer'><form method='post'><input type='hidden' name='approve_id' value='{$approve_row['id']}'><input type='submit' class='btn btn-danger' name='approval' value='确定'><button class='btn btn-default' data-dismiss='modal'>取消</button></form></div>";
                         if (isset($_POST['approval'])){
                             $approve_act_borrow=mysqli_query($link,"update `lms_borrow` set `return_time`='{$approve_row['return_time']}' where `id`={$approve_row['book_id']}");
                             $approve_act_delay=mysqli_query($link,"update `lms_delay` set `passed`='0' where `id`={$_POST['approve_id']}");

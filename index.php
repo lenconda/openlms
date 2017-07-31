@@ -43,7 +43,7 @@
                     mysqli_query($link,"set NAMES 'UTF8'");
                     $books=mysqli_query($link,"select * from `lms_books` order by `borrow` desc");
                     echo "<br/><table class='table'>";     //使用表格格式化数据
-                    echo "<tr><th>ID</th><th>名称</th><th>类型</th><th>作者</th><th>ISBN</th><th>出版商</th><th>价格</th><th>页数</th><th>入库时间</th><th>借阅次数</th><th>操作</th></tr>";
+                    echo "<tr><th>ID</th><th>名称</th><th>类型</th><th>作者</th><th>ISBN</th><th>出版商</th><th>价格</th><th>总字数</th><th>入库时间</th><th>借阅次数</th><th>操作</th></tr>";
                     while ($books_row=mysqli_fetch_array($books)){
                         echo "<tr>";
                         echo "<td>".$books_row['id']."</td>";
@@ -96,11 +96,12 @@
                                 echo "<input class='form_datetime form-control' type='text' style='width: auto' readonly name='return_time' value='2017-09-07'>";
                                 echo "<script type='text/javascript'>$('.form_datetime').datetimepicker({format: 'yyyy-mm-dd',autoclose: true,todayBtn: true,todayHighlight: true,showMeridian: true,pickerPosition: 'bottom-left',startView: 2,minView: 2}); </script>";
 
-                                echo "<br/><div><input type='submit' name='submit' class='btn btn-primary' value='确定'><a href='index.php' class='btn btn-danger'>取消</a></div>";
+                                echo "<br/><div class='modal-footer'><input type='submit' name='submit' class='btn btn-primary' value='确定'><button type='button' data-dismiss='modal' class='btn btn-default'>取消</button></div>";
                                 if (isset($_POST['submit'])){
                                     $ifexist=mysqli_query($link,"select * from `lms_user` where `name`='{$_POST['stu_name']}' and `id_card`='{$_POST['stu_id']}'");
                                     if (mysqli_num_rows($ifexist) != 1) {
                                         echo "<script>alert('未查到此人！请检查借阅者身份信息是否无误')</script>";
+                                        echo "<script>window.location.href='jump.php?jump=index.php'</script>";
                                     }elseif ($_POST['return_time'] == ''){
                                         echo "<script>alert('请选择归还日期！')</script>";
                                     }else{

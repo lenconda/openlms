@@ -109,8 +109,8 @@
                             echo "<input name='gen_id' class='form-control' type='text' style='width: auto' value='{$update_act_row['gen_id']}'><br/>";
                             echo "<p>身份证号</p><br/>";
                             echo "<input name='id_card' class='form-control' type='text' style='width: auto' value='{$update_act_row['id_card']}'><br/>";
-                            echo "<div><input type='submit' name='update' value='确定' class='btn btn-danger'><button class='btn btn-primary' data-dismiss='modal'>取消</button></div>";
-                            if (isset($_POST['update'])){
+                            echo "<div><input type='submit' name='update_admin' value='确定' class='btn btn-danger'><button class='btn btn-primary' data-dismiss='modal'>取消</button></div>";
+                            if (isset($_POST['update_admin'])){
                                 if ($_POST['stu_name'] == ''){
                                     echo "<script>alert('未填写姓名')</script>";
                                 }elseif($_POST['gen_id'] == ''){

@@ -33,7 +33,7 @@
         <?php
             include "assets/head.php";
         ?>
-
+    <div class="panel-body" align="center">
         <div class="col-md-10">
             <div class="row">
                 <div align="center"><h3>个人中心</h3></div>
@@ -55,7 +55,7 @@
                             echo "<h5>姓名：".$profile_row['name']."</h5><br/>";
                             echo "<h5>学号/工号：".$profile_row['gen_id']."</h5><br/>";
                             echo "<h5>身份证号：".$profile_row['id_card']."</h5><br/>";
-                            echo "<form method='get' action='#'><button name='updateinfo' class='btn btn-danger' data-toggle='modal' data-target='.myModal1' value='{$profile_row['id']}'>修改信息</button><button name='updatepw' class='btn btn-danger' data-toggle='modal' data-target='.myModal1_pw' value='{$profile_row['id']}'>修改密码</button></form>";
+                            echo "<form method='get' action='#'><button name='updateinfo' class='btn btn-danger' data-toggle='modal' data-target='.myModal1' value='{$profile_row['id']}'>修改信息</button><br/><br/><button name='updatepw' class='btn btn-danger' data-toggle='modal' data-target='.myModal1_pw' value='{$profile_row['id']}'>修改密码</button></form>";
                         ?>
                     </div>
                     <div class="tab-pane fade" id="borrowed">
@@ -136,6 +136,7 @@
                 <script src="../js/modalEffects.js"></script>
             </div>
         </div>
+    </div>
 
         <div class="modal fade myModal1"><!--modal,弹出层父级,fade使弹出层有一个运动过程-->
             <div class="modal-dialog"><!--modal-dialog,弹出层-->
@@ -155,7 +156,7 @@
                                 echo "<input name='gen_id' class='form-control' type='text' style='width: auto' value='{$update_act_row['gen_id']}'><br/>";
                                 echo "<p>身份证号</p><br/>";
                                 echo "<input name='id_card' class='form-control' type='text' style='width: auto' value='{$update_act_row['id_card']}'><br/>";
-                                echo "<div><input type='hidden' name='update_id' value='{$_GET['updateinfo']}'><input type='submit' name='submit' value='确定' class='btn btn-danger'><button class='btn btn-primary' data-dismiss='modal'>取消</button></div>";
+                                echo "<div class='modal-footer'><input type='hidden' name='update_id' value='{$_GET['updateinfo']}'><input type='submit' name='submit' value='确定' class='btn btn-primary'><button class='btn btn-default' data-dismiss='modal'>取消</button></div>";
                                 if (isset($_POST['submit'])){
                                     if ($_POST['stu_name'] == ''){
                                         echo "<script>alert('未填写姓名')</script>";
@@ -193,7 +194,7 @@
                                 mysqli_query($link,"set NAMES 'UTF8'");
                                 echo "<input class='form_datetime form-control' type='text' style='width: auto' readonly name='return_time' value='{$delay_info_row['return_time']}'><br/>";
                                 echo "<script type='text/javascript'>$('.form_datetime').datetimepicker({format: 'yyyy-mm-dd',autoclose: true,todayBtn: true,todayHighlight: true,showMeridian: true,pickerPosition: 'bottom-left',startView: 2,minView: 2}); </script>";
-                                echo "<div><input type='hidden' name='delay_id' value='{$_GET['delay']}'><input type='submit' name='delay' value='确定' class='btn btn-danger'><button class='btn btn-primary' data-dismiss='modal'>取消</button></div>";
+                                echo "<div class='modal-footer'><input type='hidden' name='delay_id' value='{$_GET['delay']}'><input type='submit' name='delay' value='确定' class='btn btn-primary'><button class='btn btn-default' data-dismiss='modal'>取消</button></div>";
                                 if (isset($_POST['delay'])){
                                     $delay_info=mysqli_query($link,"select * from `lms_borrow` where `id` = '{$_POST['delay_id']}'");
                                     $delay_info_row=mysqli_fetch_array($delay_info);
@@ -233,7 +234,7 @@
                             echo "<input name='oldpw' class='form-control' type='password' style='width: auto' placeholder='输入原密码'><br/>";
                             echo "<input name='newpw' class='form-control' type='password' style='width: auto' placeholder='输入新密码'><br/>";
                             echo "<input name='confirm' class='form-control' type='password' style='width: auto' placeholder='确认新密码'><br/>";
-                            echo "<div><input type='hidden' name='modpw_id' value='{$_GET['updatepw']}'><input type='submit' name='modpw' value='确定' class='btn btn-danger'><button class='btn btn-primary' data-dismiss='modal'>取消</button></div>";
+                            echo "<div class='modal-footer'><input type='hidden' name='modpw_id' value='{$_GET['updatepw']}'><input type='submit' name='modpw' value='确定' class='btn btn-primary'><button class='btn btn-default' data-dismiss='modal'>取消</button></div>";
                             if (isset($_POST['modpw'])){
                                 if ($_POST['oldpw'] == ''){
                                     echo "<script>alert('未输入原密码')</script>";

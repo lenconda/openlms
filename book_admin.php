@@ -43,7 +43,7 @@
                 mysqli_query($link,"set NAMES 'UTF8'");
                 $books=mysqli_query($link,"select * from `lms_books`");
                 echo "<br/><table class='table'>";     //使用表格格式化数据
-                echo "<tr><th>ID</th><th>名称</th><th>类型</th><th>作者</th><th>ISBN</th><th>出版商</th><th>价格</th><th>页数</th><th>入库时间</th><th>借阅次数</th><th>操作</th></tr>";
+                echo "<tr><th>ID</th><th>名称</th><th>类型</th><th>作者</th><th>ISBN</th><th>出版商</th><th>价格</th><th>总字数</th><th>入库时间</th><th>借阅次数</th><th>操作</th></tr>";
                 while ($books_row=mysqli_fetch_array($books)){
                     echo "<tr>";
                     echo "<td>".$books_row['id']."</td>";
@@ -88,6 +88,7 @@
                             <option value="历史地理-文化教育">历史地理-文化教育</option>
                             <option value="小中教育-语言文字">小中教育-语言文字</option>
                             <option value="中外文学">中外文学</option>
+                            <option value="人物传记">人物传记</option>
                             <option value="音乐-美术-雕塑">音乐-美术-雕塑</option>
                             <option value="书法艺术">书法艺术</option>
                             <option value="自然科学-医药卫生">自然科学-医药卫生</option>
@@ -102,8 +103,8 @@
                         <input name="bk_isbn" type="number" style="width: auto" class="form-control" placeholder="请输入图书的ISBN"><br/>
                         <input name="bk_publisher" type="text" style="width: auto" class="form-control" placeholder="请输入出版社全名"><br/>
                         <input name="bk_price" type="number" style="width: auto" class="form-control" placeholder="请输入图书单价"><br/>
-                        <input name="bk_page" type="number" style="width: auto" class="form-control" placeholder="请输入图书总页数"><br/>
-                        <div><input type="submit" class="btn btn-success" name="add" value="确定"><button class="btn btn-primary" data-dismiss="modal">取消</button></div><!--data-dismiss="modal"点击按钮之后可以关闭窗口-->
+                        <input name="bk_page" type="number" style="width: auto" class="form-control" placeholder="请输入图书总字数"><br/>
+                        <div class="modal-footer"><input type="submit" class="btn btn-primary" name="add" value="确定"><button class="btn btn-default" data-dismiss="modal">取消</button></div><!--data-dismiss="modal"点击按钮之后可以关闭窗口-->
                     </form>
                     <?php
                         if (isset($_POST['add'])){
@@ -149,6 +150,7 @@
                                     <option value='历史地理-文化教育'>历史地理-文化教育</option>
                                     <option value='小中教育-语言文字'>小中教育-语言文字</option>
                                     <option value='中外文学'>中外文学</option>
+                                    <option value='人物传记'>人物传记</option>
                                     <option value='音乐-美术-雕塑'>音乐-美术-雕塑</option>
                                     <option value='书法艺术'>书法艺术</option>
                                     <option value='自然科学-医药卫生'>自然科学-医药卫生</option>
@@ -168,9 +170,9 @@
                             echo "<input type='number' name='mod_isbn' class='form-control' style='width: auto' value='{$book_info_row['isbn']}'><br/>";
                             echo "<p>图书价格</p>";
                             echo "<input type='number' name='mod_price' class='form-control' style='width: auto' value='{$book_info_row['price']}'><br/>";
-                            echo "<p>图书页数</p>";
+                            echo "<p>图书总字数</p>";
                             echo "<input type='number' name='mod_page' class='form-control' style='width: auto' value='{$book_info_row['page']}'><br/>";
-                            echo "<div><input type='submit' class='btn btn-success' name='update' value='确定'><button class='btn btn-primary' data-dismiss='modal'>取消</button></div>";
+                            echo "<div class='modal-footer'><input type='submit' class='btn btn-primary' name='update' value='确定'><button class='btn btn-default' data-dismiss='modal'>取消</button></div>";
                             //echo "<br/><div><input type='submit' name='submit' class='btn btn-primary' value='确定'><a href='index.php' class='btn btn-danger'>取消</a></div></form>";
                             if (isset($_POST['update'])){
                                 if ($_POST['mod_name'] == ''){
@@ -217,7 +219,7 @@
                             echo "<h5>图书名称：".$delete_info_row['name']."</h5>";
                             echo "<h5>出版商：".$delete_info_row['publisher']."</h5>";
                             echo "<h5>ISBN：".$delete_info_row['isbn']."</h5>";
-                            echo "<br/><div><input name='delete_id' value='{$delete_info_row['id']}' type='hidden'><input type='submit' name='delete' class='btn btn-danger' value='确定'><a href='index.php' class='btn btn-primary'>取消</a></div>"
+                            echo "<br/><div class='modal-footer'><input name='delete_id' value='{$delete_info_row['id']}' type='hidden'><input type='submit' name='delete' class='btn btn-danger' value='确定'><button type='button' data-dismiss='modal' class='btn btn-default'>取消</button></div>"
                         ?>
                     </form>
                     <?php
