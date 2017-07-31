@@ -2,7 +2,7 @@
 
 ## Screenshots
 
-  ![screenshot1](http://lanconda.github.io/screenshot.png)
+  ![screenshot1](http://lenconda.github.io/screenshot1.png)
   ![screenshot2](http://lenconda.github.io/screenshot2.png)
 
 ## Features
