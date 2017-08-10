@@ -32,13 +32,17 @@
   <body>
         <?php
             include "assets/head.php";
-            include "assets/sidebar.php";
         ?>
-
-        <div class="col-md-10">
+        <div class="container-fluid">
             <div class="row">
-                <div align="center"><h3>图书借阅排行榜</h3></div>
-                <?php
+            <?php
+                include "assets/sidebar.php";
+            ?>
+            <div class="col-md-10 ">
+                <div class="page-header">
+                    <h1>图书借阅排行榜</h1>
+                </div>
+                    <?php
                     include "config/config_inc.php";
                     mysqli_query($link,"set NAMES 'UTF8'");
                     $books=mysqli_query($link,"select * from `lms_books` order by `borrow` desc");
@@ -60,10 +64,11 @@
                         echo "</tr>";
                     }
 
-                ?>
-                <!--<form action="borrow.php" method="get" target="_blank"><button class="btn btn-danger" type="submit">借出</button></form>-->
-                <script src="js/classie.js"></script>
-                <script src="js/modalEffects.js"></script>
+                    ?>
+                    <!--<form action="borrow.php" method="get" target="_blank"><button class="btn btn-danger" type="submit">借出</button></form>-->
+                    <script src="js/classie.js"></script>
+                    <script src="js/modalEffects.js"></script>
+                </div>
             </div>
         </div>
         <div class="modal fade myModal1"><!--modal,弹出层父级,fade使弹出层有一个运动过程-->

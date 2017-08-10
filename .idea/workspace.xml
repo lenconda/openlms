@@ -3,17 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e7cefb5a-2454-4f11-8cf5-11a172880d66" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/footer.php" afterPath="$PROJECT_DIR$/assets/footer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/head.php" afterPath="$PROJECT_DIR$/assets/head.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/sidebar.php" afterPath="$PROJECT_DIR$/assets/sidebar.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/book_admin.php" afterPath="$PROJECT_DIR$/book_admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/borrowed.php" afterPath="$PROJECT_DIR$/borrowed.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/delay.php" afterPath="$PROJECT_DIR$/delay.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/profile/assets/head.php" afterPath="$PROJECT_DIR$/profile/assets/head.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/profile/index.php" afterPath="$PROJECT_DIR$/profile/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/return.php" afterPath="$PROJECT_DIR$/return.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/returned.php" afterPath="$PROJECT_DIR$/returned.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search.php" afterPath="$PROJECT_DIR$/search.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/users.php" afterPath="$PROJECT_DIR$/users.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,17 +35,9 @@
       <file leaf-file-name="sidebar.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/sidebar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#3;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#4;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#5;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="198">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -59,7 +45,7 @@
       <file leaf-file-name="borrowed.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/borrowed.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
+            <state relative-caret-position="810">
               <caret line="45" column="80" lean-forward="false" selection-start-line="45" selection-start-column="80" selection-end-line="45" selection-end-column="80" />
               <folding>
                 <marker date="1502347394589" expanded="true" signature="1660:1712" ph="select * fro... lms_borrow" />
@@ -68,20 +54,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-816">
-              <caret line="39" column="44" lean-forward="true" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
+            <state relative-caret-position="540">
+              <caret line="47" column="98" lean-forward="true" selection-start-line="47" selection-start-column="98" selection-end-line="47" selection-end-column="98" />
               <folding>
-                <marker date="1502349320765" expanded="true" signature="1763:1811" ph="select * fro... lms_books" />
-                <marker date="1502349320765" expanded="true" signature="4157:4217" ph="select * fro... lms_books" />
-                <marker date="1502349320765" expanded="true" signature="5006:5017" ph="..." />
-                <marker date="1502349320765" expanded="true" signature="5150:5161" ph="..." />
-                <marker date="1502349320765" expanded="true" signature="5604:5615" ph="..." />
-                <marker date="1502349320765" expanded="true" signature="6287:6382" ph="select * fro... lms_user" />
-                <marker date="1502349320765" expanded="true" signature="7145:7222" ph="update `lms_... " />
-                <marker date="1502349320765" expanded="true" signature="7345:7671" ph="INSERT INTO `lms_borrow`... " />
+                <marker date="1502378293005" expanded="true" signature="1889:1937" ph="select * fro... lms_books" />
+                <marker date="1502378293005" expanded="true" signature="4322:4382" ph="select * fro... lms_books" />
+                <marker date="1502378293005" expanded="true" signature="5171:5182" ph="..." />
+                <marker date="1502378293005" expanded="true" signature="5315:5326" ph="..." />
+                <marker date="1502378293005" expanded="true" signature="5769:5780" ph="..." />
+                <marker date="1502378293005" expanded="true" signature="6452:6547" ph="select * fro... lms_user" />
+                <marker date="1502378293005" expanded="true" signature="7310:7387" ph="update `lms_... " />
+                <marker date="1502378293005" expanded="true" signature="7510:7836" ph="INSERT INTO `lms_borrow`... " />
               </folding>
             </state>
           </provider>
@@ -90,8 +76,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/profile/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="458">
-              <caret line="38" column="55" lean-forward="true" selection-start-line="38" selection-start-column="55" selection-end-line="38" selection-end-column="55" />
+            <state relative-caret-position="648">
+              <caret line="153" column="84" lean-forward="false" selection-start-line="153" selection-start-column="84" selection-end-line="153" selection-end-column="84" />
               <folding>
                 <marker date="1502348808696" expanded="true" signature="2276:2334" ph="select * fro... lms_user" />
                 <marker date="1502348808696" expanded="true" signature="3358:3451" ph="select * fro... lms_borrow" />
@@ -119,7 +105,7 @@
         <entry file="file://$PROJECT_DIR$/profile/assets/head.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="486">
-              <caret line="27" column="37" lean-forward="true" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+              <caret line="27" column="37" lean-forward="false" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -128,26 +114,26 @@
       <file leaf-file-name="book_admin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/book_admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="143" column="60" lean-forward="false" selection-start-line="143" selection-start-column="60" selection-end-line="143" selection-end-column="60" />
+            <state relative-caret-position="242">
+              <caret line="41" column="59" lean-forward="false" selection-start-line="41" selection-start-column="59" selection-end-line="41" selection-end-column="59" />
               <folding>
-                <marker date="1502348147002" expanded="true" signature="1690:1715" ph="select * fro... lms_books" />
-                <marker date="1502348147002" expanded="true" signature="2894:2900" ph="&amp;nbsp;" />
-                <marker date="1502348147002" expanded="true" signature="2900:2906" ph="&amp;nbsp;" />
-                <marker date="1502348147002" expanded="true" signature="3205:3273" ph="delete from " />
-                <marker date="1502348147002" expanded="true" signature="6579:6887" ph="INSERT INTO `lms_books`... " />
-                <marker date="1502348147002" expanded="true" signature="8068:8129" ph="select * fro... lms_books" />
-                <marker date="1502348147002" expanded="true" signature="8636:8647" ph="..." />
-                <marker date="1502348147002" expanded="true" signature="8845:8856" ph="..." />
-                <marker date="1502348147002" expanded="true" signature="10342:10353" ph="..." />
-                <marker date="1502348147002" expanded="true" signature="10584:10595" ph="..." />
-                <marker date="1502348147002" expanded="true" signature="10829:10840" ph="..." />
-                <marker date="1502348147002" expanded="true" signature="11070:11081" ph="..." />
-                <marker date="1502348147002" expanded="true" signature="11310:11321" ph="..." />
-                <marker date="1502348147002" expanded="true" signature="12636:12932" ph="update `lms_... " />
-                <marker date="1502348147002" expanded="true" signature="14170:14231" ph="select * fro... lms_books" />
-                <marker date="1502348147002" expanded="true" signature="15109:15169" ph="select * fro... lms_books" />
-                <marker date="1502348147002" expanded="true" signature="15298:15370" ph="DELETE FROM " />
+                <marker date="1502377362798" expanded="true" signature="1842:1867" ph="select * fro... lms_books" />
+                <marker date="1502377362798" expanded="true" signature="3046:3052" ph="&amp;nbsp;" />
+                <marker date="1502377362798" expanded="true" signature="3052:3058" ph="&amp;nbsp;" />
+                <marker date="1502377362798" expanded="true" signature="3357:3425" ph="delete from " />
+                <marker date="1502377362798" expanded="true" signature="6731:7039" ph="INSERT INTO `lms_books`... " />
+                <marker date="1502377362798" expanded="true" signature="8220:8281" ph="select * fro... lms_books" />
+                <marker date="1502377362798" expanded="true" signature="8788:8799" ph="..." />
+                <marker date="1502377362798" expanded="true" signature="8997:9008" ph="..." />
+                <marker date="1502377362798" expanded="true" signature="10494:10505" ph="..." />
+                <marker date="1502377362798" expanded="true" signature="10736:10747" ph="..." />
+                <marker date="1502377362798" expanded="true" signature="10981:10992" ph="..." />
+                <marker date="1502377362798" expanded="true" signature="11222:11233" ph="..." />
+                <marker date="1502377362798" expanded="true" signature="11462:11473" ph="..." />
+                <marker date="1502377362798" expanded="true" signature="12788:13084" ph="update `lms_... " />
+                <marker date="1502377362798" expanded="true" signature="14322:14383" ph="select * fro... lms_books" />
+                <marker date="1502377362798" expanded="true" signature="15261:15321" ph="select * fro... lms_books" />
+                <marker date="1502377362798" expanded="true" signature="15450:15522" ph="DELETE FROM " />
               </folding>
             </state>
           </provider>
@@ -156,22 +142,9 @@
       <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="61" lean-forward="false" selection-start-line="2" selection-start-column="61" selection-end-line="2" selection-end-column="61" />
-              <folding>
-                <marker date="1502349502937" expanded="true" signature="50:532" ph="..." />
-                <marker date="1502349502937" expanded="true" signature="114:521" ph="..." />
-                <marker date="1502349502937" expanded="true" signature="175:506" ph="..." />
-                <marker date="1502349502937" expanded="false" signature="244:258" ph="..." />
-                <marker date="1502349502937" expanded="true" signature="259:487" ph="..." />
-                <marker date="1502349502937" expanded="true" signature="569:1814" ph="..." />
-                <marker date="1502349502937" expanded="true" signature="638:1803" ph="..." />
-                <marker date="1502349502937" expanded="true" signature="701:1788" ph="..." />
-                <marker date="1502349502937" expanded="true" signature="772:938" ph="..." />
-                <marker date="1502349502937" expanded="true" signature="1006:1744" ph="..." />
-                <marker date="1502349502937" expanded="true" signature="1071:1211" ph="..." />
-                <marker date="1502349502937" expanded="true" signature="1397:1721" ph="..." />
-              </folding>
+            <state relative-caret-position="414">
+              <caret line="23" column="80" lean-forward="true" selection-start-line="23" selection-start-column="80" selection-end-line="23" selection-end-column="80" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -179,7 +152,7 @@
       <file leaf-file-name="returned.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/returned.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="828">
               <caret line="46" column="45" lean-forward="false" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
               <folding>
                 <marker date="1502347564208" expanded="true" signature="1660:1729" ph="select * fro... lms_borrow" />
@@ -191,8 +164,8 @@
       <file leaf-file-name="search.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/search.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="198" column="48" lean-forward="true" selection-start-line="198" selection-start-column="48" selection-end-line="198" selection-end-column="48" />
+            <state relative-caret-position="3564">
+              <caret line="198" column="48" lean-forward="false" selection-start-line="198" selection-start-column="48" selection-end-line="198" selection-end-column="48" />
               <folding>
                 <marker date="1502347564212" expanded="true" signature="1613:1701" ph="select * fro... lms_books" />
                 <marker date="1502347564212" expanded="true" signature="3377:3540" ph="select * fro... lms_user" />
@@ -208,22 +181,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="head.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="head.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/head.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="33" lean-forward="true" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
+            <state relative-caret-position="270">
+              <caret line="27" column="23" lean-forward="false" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
               <folding>
-                <marker date="1502349551049" expanded="true" signature="3373:3429" ph="select * fro... lms_user" />
-                <marker date="1502349551049" expanded="true" signature="3574:3585" ph="..." />
-                <marker date="1502349551049" expanded="true" signature="3713:3724" ph="..." />
-                <marker date="1502349551049" expanded="true" signature="3852:3863" ph="..." />
-                <marker date="1502349551049" expanded="true" signature="5032:5129" ph="UPDATE `lms_... " />
-                <marker date="1502349551049" expanded="true" signature="6401:6457" ph="select * fro... lms_user" />
-                <marker date="1502349551049" expanded="true" signature="6718:6729" ph="..." />
-                <marker date="1502349551049" expanded="true" signature="6950:6961" ph="..." />
-                <marker date="1502349551049" expanded="true" signature="7186:7197" ph="..." />
-                <marker date="1502349551049" expanded="true" signature="8046:8210" ph="UPDATE `lms_... " />
+                <marker date="1502377603636" expanded="true" signature="3373:3429" ph="select * fro... lms_user" />
+                <marker date="1502377603636" expanded="true" signature="3574:3585" ph="..." />
+                <marker date="1502377603636" expanded="true" signature="3713:3724" ph="..." />
+                <marker date="1502377603636" expanded="true" signature="3852:3863" ph="..." />
+                <marker date="1502377603636" expanded="true" signature="5032:5129" ph="UPDATE `lms_... " />
+                <marker date="1502377603636" expanded="true" signature="6401:6457" ph="select * fro... lms_user" />
+                <marker date="1502377603636" expanded="true" signature="6718:6729" ph="..." />
+                <marker date="1502377603636" expanded="true" signature="6950:6961" ph="..." />
+                <marker date="1502377603636" expanded="true" signature="7186:7197" ph="..." />
+                <marker date="1502377603636" expanded="true" signature="8046:8210" ph="UPDATE `lms_... " />
               </folding>
             </state>
           </provider>
@@ -320,13 +293,13 @@
         <option value="$PROJECT_DIR$/return.php" />
         <option value="$PROJECT_DIR$/returned.php" />
         <option value="$PROJECT_DIR$/search.php" />
-        <option value="$PROJECT_DIR$/book_admin.php" />
         <option value="$PROJECT_DIR$/profile/assets/head.php" />
         <option value="$PROJECT_DIR$/profile/index.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/assets/sidebar.php" />
-        <option value="$PROJECT_DIR$/assets/footer.php" />
+        <option value="$PROJECT_DIR$/book_admin.php" />
         <option value="$PROJECT_DIR$/assets/head.php" />
+        <option value="$PROJECT_DIR$/assets/footer.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -407,7 +380,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -856,11 +829,22 @@
       <workItem from="1501582857293" duration="102000" />
       <workItem from="1502265866083" duration="157000" />
       <workItem from="1502346436368" duration="3279000" />
+      <workItem from="1502350268287" duration="603000" />
+      <workItem from="1502355817793" duration="131000" />
+      <workItem from="1502355970750" duration="96000" />
+      <workItem from="1502356088568" duration="79000" />
+      <workItem from="1502356191089" duration="86000" />
+      <workItem from="1502356299730" duration="207000" />
+      <workItem from="1502356530241" duration="214000" />
+      <workItem from="1502356766493" duration="773000" />
+      <workItem from="1502373201644" duration="637000" />
+      <workItem from="1502374270577" duration="14000" />
+      <workItem from="1502376358619" duration="2175000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94711000" />
+    <option name="totallyTimeSpent" value="99726000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -877,7 +861,6 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -902,6 +885,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924336" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -928,23 +912,23 @@
         <state relative-caret-position="4640">
           <caret line="232" column="0" lean-forward="false" selection-start-line="232" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
           <folding>
-            <marker date="1502348147002" expanded="true" signature="1690:1715" ph="select * fro... lms_books" />
-            <marker date="1502348147002" expanded="true" signature="2894:2900" ph="&amp;nbsp;" />
-            <marker date="1502348147002" expanded="true" signature="2900:2906" ph="&amp;nbsp;" />
-            <marker date="1502348147002" expanded="true" signature="3205:3273" ph="delete from " />
-            <marker date="1502348147002" expanded="true" signature="6579:6887" ph="INSERT INTO `lms_books`... " />
-            <marker date="1502348147002" expanded="true" signature="8068:8129" ph="select * fro... lms_books" />
-            <marker date="1502348147002" expanded="true" signature="8636:8647" ph="..." />
-            <marker date="1502348147002" expanded="true" signature="8845:8856" ph="..." />
-            <marker date="1502348147002" expanded="true" signature="10342:10353" ph="..." />
-            <marker date="1502348147002" expanded="true" signature="10584:10595" ph="..." />
-            <marker date="1502348147002" expanded="true" signature="10829:10840" ph="..." />
-            <marker date="1502348147002" expanded="true" signature="11070:11081" ph="..." />
-            <marker date="1502348147002" expanded="true" signature="11310:11321" ph="..." />
-            <marker date="1502348147002" expanded="true" signature="12636:12932" ph="update `lms_... " />
-            <marker date="1502348147002" expanded="true" signature="14170:14231" ph="select * fro... lms_books" />
-            <marker date="1502348147002" expanded="true" signature="15109:15169" ph="select * fro... lms_books" />
-            <marker date="1502348147002" expanded="true" signature="15298:15370" ph="DELETE FROM " />
+            <marker date="1502377362798" expanded="true" signature="1842:1867" ph="select * fro... lms_books" />
+            <marker date="1502377362798" expanded="true" signature="3046:3052" ph="&amp;nbsp;" />
+            <marker date="1502377362798" expanded="true" signature="3052:3058" ph="&amp;nbsp;" />
+            <marker date="1502377362798" expanded="true" signature="3357:3425" ph="delete from " />
+            <marker date="1502377362798" expanded="true" signature="6731:7039" ph="INSERT INTO `lms_books`... " />
+            <marker date="1502377362798" expanded="true" signature="8220:8281" ph="select * fro... lms_books" />
+            <marker date="1502377362798" expanded="true" signature="8788:8799" ph="..." />
+            <marker date="1502377362798" expanded="true" signature="8997:9008" ph="..." />
+            <marker date="1502377362798" expanded="true" signature="10494:10505" ph="..." />
+            <marker date="1502377362798" expanded="true" signature="10736:10747" ph="..." />
+            <marker date="1502377362798" expanded="true" signature="10981:10992" ph="..." />
+            <marker date="1502377362798" expanded="true" signature="11222:11233" ph="..." />
+            <marker date="1502377362798" expanded="true" signature="11462:11473" ph="..." />
+            <marker date="1502377362798" expanded="true" signature="12788:13084" ph="update `lms_... " />
+            <marker date="1502377362798" expanded="true" signature="14322:14383" ph="select * fro... lms_books" />
+            <marker date="1502377362798" expanded="true" signature="15261:15321" ph="select * fro... lms_books" />
+            <marker date="1502377362798" expanded="true" signature="15450:15522" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -1008,14 +992,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1502349320765" expanded="true" signature="1763:1811" ph="select * fro... lms_books" />
-            <marker date="1502349320765" expanded="true" signature="4157:4217" ph="select * fro... lms_books" />
-            <marker date="1502349320765" expanded="true" signature="5006:5017" ph="..." />
-            <marker date="1502349320765" expanded="true" signature="5150:5161" ph="..." />
-            <marker date="1502349320765" expanded="true" signature="5604:5615" ph="..." />
-            <marker date="1502349320765" expanded="true" signature="6287:6382" ph="select * fro... lms_user" />
-            <marker date="1502349320765" expanded="true" signature="7145:7222" ph="update `lms_... " />
-            <marker date="1502349320765" expanded="true" signature="7345:7671" ph="INSERT INTO `lms_borrow`... " />
+            <marker date="1502378293005" expanded="true" signature="1889:1937" ph="select * fro... lms_books" />
+            <marker date="1502378293005" expanded="true" signature="4322:4382" ph="select * fro... lms_books" />
+            <marker date="1502378293005" expanded="true" signature="5171:5182" ph="..." />
+            <marker date="1502378293005" expanded="true" signature="5315:5326" ph="..." />
+            <marker date="1502378293005" expanded="true" signature="5769:5780" ph="..." />
+            <marker date="1502378293005" expanded="true" signature="6452:6547" ph="select * fro... lms_user" />
+            <marker date="1502378293005" expanded="true" signature="7310:7387" ph="update `lms_... " />
+            <marker date="1502378293005" expanded="true" signature="7510:7836" ph="INSERT INTO `lms_borrow`... " />
           </folding>
         </state>
       </provider>
@@ -1025,23 +1009,23 @@
         <state relative-caret-position="3260">
           <caret line="163" column="179" lean-forward="false" selection-start-line="163" selection-start-column="34" selection-end-line="163" selection-end-column="179" />
           <folding>
-            <marker date="1502348147002" expanded="true" signature="1690:1715" ph="select * fro... lms_books" />
-            <marker date="1502348147002" expanded="true" signature="2894:2900" ph="&amp;nbsp;" />
-            <marker date="1502348147002" expanded="true" signature="2900:2906" ph="&amp;nbsp;" />
-            <marker date="1502348147002" expanded="true" signature="3205:3273" ph="delete from " />
-            <marker date="1502348147002" expanded="true" signature="6579:6887" ph="INSERT INTO `lms_books`... " />
-            <marker date="1502348147002" expanded="true" signature="8068:8129" ph="select * fro... lms_books" />
-            <marker date="1502348147002" expanded="true" signature="8636:8647" ph="..." />
-            <marker date="1502348147002" expanded="true" signature="8845:8856" ph="..." />
-            <marker date="1502348147002" expanded="true" signature="10342:10353" ph="..." />
-            <marker date="1502348147002" expanded="true" signature="10584:10595" ph="..." />
-            <marker date="1502348147002" expanded="true" signature="10829:10840" ph="..." />
-            <marker date="1502348147002" expanded="true" signature="11070:11081" ph="..." />
-            <marker date="1502348147002" expanded="true" signature="11310:11321" ph="..." />
-            <marker date="1502348147002" expanded="true" signature="12636:12932" ph="update `lms_... " />
-            <marker date="1502348147002" expanded="true" signature="14170:14231" ph="select * fro... lms_books" />
-            <marker date="1502348147002" expanded="true" signature="15109:15169" ph="select * fro... lms_books" />
-            <marker date="1502348147002" expanded="true" signature="15298:15370" ph="DELETE FROM " />
+            <marker date="1502377362798" expanded="true" signature="1842:1867" ph="select * fro... lms_books" />
+            <marker date="1502377362798" expanded="true" signature="3046:3052" ph="&amp;nbsp;" />
+            <marker date="1502377362798" expanded="true" signature="3052:3058" ph="&amp;nbsp;" />
+            <marker date="1502377362798" expanded="true" signature="3357:3425" ph="delete from " />
+            <marker date="1502377362798" expanded="true" signature="6731:7039" ph="INSERT INTO `lms_books`... " />
+            <marker date="1502377362798" expanded="true" signature="8220:8281" ph="select * fro... lms_books" />
+            <marker date="1502377362798" expanded="true" signature="8788:8799" ph="..." />
+            <marker date="1502377362798" expanded="true" signature="8997:9008" ph="..." />
+            <marker date="1502377362798" expanded="true" signature="10494:10505" ph="..." />
+            <marker date="1502377362798" expanded="true" signature="10736:10747" ph="..." />
+            <marker date="1502377362798" expanded="true" signature="10981:10992" ph="..." />
+            <marker date="1502377362798" expanded="true" signature="11222:11233" ph="..." />
+            <marker date="1502377362798" expanded="true" signature="11462:11473" ph="..." />
+            <marker date="1502377362798" expanded="true" signature="12788:13084" ph="update `lms_... " />
+            <marker date="1502377362798" expanded="true" signature="14322:14383" ph="select * fro... lms_books" />
+            <marker date="1502377362798" expanded="true" signature="15261:15321" ph="select * fro... lms_books" />
+            <marker date="1502377362798" expanded="true" signature="15450:15522" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -1091,14 +1075,14 @@
         <state relative-caret-position="1700">
           <caret line="85" column="61" lean-forward="false" selection-start-line="85" selection-start-column="61" selection-end-line="85" selection-end-column="61" />
           <folding>
-            <marker date="1502349320765" expanded="true" signature="1763:1811" ph="select * fro... lms_books" />
-            <marker date="1502349320765" expanded="true" signature="4157:4217" ph="select * fro... lms_books" />
-            <marker date="1502349320765" expanded="true" signature="5006:5017" ph="..." />
-            <marker date="1502349320765" expanded="true" signature="5150:5161" ph="..." />
-            <marker date="1502349320765" expanded="true" signature="5604:5615" ph="..." />
-            <marker date="1502349320765" expanded="true" signature="6287:6382" ph="select * fro... lms_user" />
-            <marker date="1502349320765" expanded="true" signature="7145:7222" ph="update `lms_... " />
-            <marker date="1502349320765" expanded="true" signature="7345:7671" ph="INSERT INTO `lms_borrow`... " />
+            <marker date="1502378293005" expanded="true" signature="1889:1937" ph="select * fro... lms_books" />
+            <marker date="1502378293005" expanded="true" signature="4322:4382" ph="select * fro... lms_books" />
+            <marker date="1502378293005" expanded="true" signature="5171:5182" ph="..." />
+            <marker date="1502378293005" expanded="true" signature="5315:5326" ph="..." />
+            <marker date="1502378293005" expanded="true" signature="5769:5780" ph="..." />
+            <marker date="1502378293005" expanded="true" signature="6452:6547" ph="select * fro... lms_user" />
+            <marker date="1502378293005" expanded="true" signature="7310:7387" ph="update `lms_... " />
+            <marker date="1502378293005" expanded="true" signature="7510:7836" ph="INSERT INTO `lms_borrow`... " />
           </folding>
         </state>
       </provider>
@@ -1125,23 +1109,23 @@
         <state relative-caret-position="940">
           <caret line="47" column="45" lean-forward="false" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="45" />
           <folding>
-            <marker date="1502348147002" expanded="true" signature="1690:1715" ph="select * fro... lms_books" />
-            <marker date="1502348147002" expanded="true" signature="2894:2900" ph="&amp;nbsp;" />
-            <marker date="1502348147002" expanded="true" signature="2900:2906" ph="&amp;nbsp;" />
-            <marker date="1502348147002" expanded="true" signature="3205:3273" ph="delete from " />
-            <marker date="1502348147002" expanded="true" signature="6579:6887" ph="INSERT INTO `lms_books`... " />
-            <marker date="1502348147002" expanded="true" signature="8068:8129" ph="select * fro... lms_books" />
-            <marker date="1502348147002" expanded="true" signature="8636:8647" ph="..." />
-            <marker date="1502348147002" expanded="true" signature="8845:8856" ph="..." />
-            <marker date="1502348147002" expanded="true" signature="10342:10353" ph="..." />
-            <marker date="1502348147002" expanded="true" signature="10584:10595" ph="..." />
-            <marker date="1502348147002" expanded="true" signature="10829:10840" ph="..." />
-            <marker date="1502348147002" expanded="true" signature="11070:11081" ph="..." />
-            <marker date="1502348147002" expanded="true" signature="11310:11321" ph="..." />
-            <marker date="1502348147002" expanded="true" signature="12636:12932" ph="update `lms_... " />
-            <marker date="1502348147002" expanded="true" signature="14170:14231" ph="select * fro... lms_books" />
-            <marker date="1502348147002" expanded="true" signature="15109:15169" ph="select * fro... lms_books" />
-            <marker date="1502348147002" expanded="true" signature="15298:15370" ph="DELETE FROM " />
+            <marker date="1502377362798" expanded="true" signature="1842:1867" ph="select * fro... lms_books" />
+            <marker date="1502377362798" expanded="true" signature="3046:3052" ph="&amp;nbsp;" />
+            <marker date="1502377362798" expanded="true" signature="3052:3058" ph="&amp;nbsp;" />
+            <marker date="1502377362798" expanded="true" signature="3357:3425" ph="delete from " />
+            <marker date="1502377362798" expanded="true" signature="6731:7039" ph="INSERT INTO `lms_books`... " />
+            <marker date="1502377362798" expanded="true" signature="8220:8281" ph="select * fro... lms_books" />
+            <marker date="1502377362798" expanded="true" signature="8788:8799" ph="..." />
+            <marker date="1502377362798" expanded="true" signature="8997:9008" ph="..." />
+            <marker date="1502377362798" expanded="true" signature="10494:10505" ph="..." />
+            <marker date="1502377362798" expanded="true" signature="10736:10747" ph="..." />
+            <marker date="1502377362798" expanded="true" signature="10981:10992" ph="..." />
+            <marker date="1502377362798" expanded="true" signature="11222:11233" ph="..." />
+            <marker date="1502377362798" expanded="true" signature="11462:11473" ph="..." />
+            <marker date="1502377362798" expanded="true" signature="12788:13084" ph="update `lms_... " />
+            <marker date="1502377362798" expanded="true" signature="14322:14383" ph="select * fro... lms_books" />
+            <marker date="1502377362798" expanded="true" signature="15261:15321" ph="select * fro... lms_books" />
+            <marker date="1502377362798" expanded="true" signature="15450:15522" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -1151,14 +1135,14 @@
         <state relative-caret-position="940">
           <caret line="47" column="170" lean-forward="false" selection-start-line="47" selection-start-column="170" selection-end-line="47" selection-end-column="170" />
           <folding>
-            <marker date="1502349320765" expanded="true" signature="1763:1811" ph="select * fro... lms_books" />
-            <marker date="1502349320765" expanded="true" signature="4157:4217" ph="select * fro... lms_books" />
-            <marker date="1502349320765" expanded="true" signature="5006:5017" ph="..." />
-            <marker date="1502349320765" expanded="true" signature="5150:5161" ph="..." />
-            <marker date="1502349320765" expanded="true" signature="5604:5615" ph="..." />
-            <marker date="1502349320765" expanded="true" signature="6287:6382" ph="select * fro... lms_user" />
-            <marker date="1502349320765" expanded="true" signature="7145:7222" ph="update `lms_... " />
-            <marker date="1502349320765" expanded="true" signature="7345:7671" ph="INSERT INTO `lms_borrow`... " />
+            <marker date="1502378293005" expanded="true" signature="1889:1937" ph="select * fro... lms_books" />
+            <marker date="1502378293005" expanded="true" signature="4322:4382" ph="select * fro... lms_books" />
+            <marker date="1502378293005" expanded="true" signature="5171:5182" ph="..." />
+            <marker date="1502378293005" expanded="true" signature="5315:5326" ph="..." />
+            <marker date="1502378293005" expanded="true" signature="5769:5780" ph="..." />
+            <marker date="1502378293005" expanded="true" signature="6452:6547" ph="select * fro... lms_user" />
+            <marker date="1502378293005" expanded="true" signature="7310:7387" ph="update `lms_... " />
+            <marker date="1502378293005" expanded="true" signature="7510:7836" ph="INSERT INTO `lms_borrow`... " />
           </folding>
         </state>
       </provider>
@@ -1168,23 +1152,23 @@
         <state relative-caret-position="1860">
           <caret line="93" column="90" lean-forward="false" selection-start-line="93" selection-start-column="90" selection-end-line="93" selection-end-column="90" />
           <folding>
-            <marker date="1502348147002" expanded="true" signature="1690:1715" ph="select * fro... lms_books" />
-            <marker date="1502348147002" expanded="true" signature="2894:2900" ph="&amp;nbsp;" />
-            <marker date="1502348147002" expanded="true" signature="2900:2906" ph="&amp;nbsp;" />
-            <marker date="1502348147002" expanded="true" signature="3205:3273" ph="delete from " />
-            <marker date="1502348147002" expanded="true" signature="6579:6887" ph="INSERT INTO `lms_books`... " />
-            <marker date="1502348147002" expanded="true" signature="8068:8129" ph="select * fro... lms_books" />
-            <marker date="1502348147002" expanded="true" signature="8636:8647" ph="..." />
-            <marker date="1502348147002" expanded="true" signature="8845:8856" ph="..." />
-            <marker date="1502348147002" expanded="true" signature="10342:10353" ph="..." />
-            <marker date="1502348147002" expanded="true" signature="10584:10595" ph="..." />
-            <marker date="1502348147002" expanded="true" signature="10829:10840" ph="..." />
-            <marker date="1502348147002" expanded="true" signature="11070:11081" ph="..." />
-            <marker date="1502348147002" expanded="true" signature="11310:11321" ph="..." />
-            <marker date="1502348147002" expanded="true" signature="12636:12932" ph="update `lms_... " />
-            <marker date="1502348147002" expanded="true" signature="14170:14231" ph="select * fro... lms_books" />
-            <marker date="1502348147002" expanded="true" signature="15109:15169" ph="select * fro... lms_books" />
-            <marker date="1502348147002" expanded="true" signature="15298:15370" ph="DELETE FROM " />
+            <marker date="1502377362798" expanded="true" signature="1842:1867" ph="select * fro... lms_books" />
+            <marker date="1502377362798" expanded="true" signature="3046:3052" ph="&amp;nbsp;" />
+            <marker date="1502377362798" expanded="true" signature="3052:3058" ph="&amp;nbsp;" />
+            <marker date="1502377362798" expanded="true" signature="3357:3425" ph="delete from " />
+            <marker date="1502377362798" expanded="true" signature="6731:7039" ph="INSERT INTO `lms_books`... " />
+            <marker date="1502377362798" expanded="true" signature="8220:8281" ph="select * fro... lms_books" />
+            <marker date="1502377362798" expanded="true" signature="8788:8799" ph="..." />
+            <marker date="1502377362798" expanded="true" signature="8997:9008" ph="..." />
+            <marker date="1502377362798" expanded="true" signature="10494:10505" ph="..." />
+            <marker date="1502377362798" expanded="true" signature="10736:10747" ph="..." />
+            <marker date="1502377362798" expanded="true" signature="10981:10992" ph="..." />
+            <marker date="1502377362798" expanded="true" signature="11222:11233" ph="..." />
+            <marker date="1502377362798" expanded="true" signature="11462:11473" ph="..." />
+            <marker date="1502377362798" expanded="true" signature="12788:13084" ph="update `lms_... " />
+            <marker date="1502377362798" expanded="true" signature="14322:14383" ph="select * fro... lms_books" />
+            <marker date="1502377362798" expanded="true" signature="15261:15321" ph="select * fro... lms_books" />
+            <marker date="1502377362798" expanded="true" signature="15450:15522" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -1337,7 +1321,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/returned.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="828">
           <caret line="46" column="45" lean-forward="false" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
           <folding>
             <marker date="1502347564208" expanded="true" signature="1660:1729" ph="select * fro... lms_borrow" />
@@ -1347,8 +1331,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/search.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="198" column="48" lean-forward="true" selection-start-line="198" selection-start-column="48" selection-end-line="198" selection-end-column="48" />
+        <state relative-caret-position="3564">
+          <caret line="198" column="48" lean-forward="false" selection-start-line="198" selection-start-column="48" selection-end-line="198" selection-end-column="48" />
           <folding>
             <marker date="1502347564212" expanded="true" signature="1613:1701" ph="select * fro... lms_books" />
             <marker date="1502347564212" expanded="true" signature="3377:3540" ph="select * fro... lms_user" />
@@ -1363,44 +1347,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/book_admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="143" column="60" lean-forward="false" selection-start-line="143" selection-start-column="60" selection-end-line="143" selection-end-column="60" />
-          <folding>
-            <marker date="1502348147002" expanded="true" signature="1690:1715" ph="select * fro... lms_books" />
-            <marker date="1502348147002" expanded="true" signature="2894:2900" ph="&amp;nbsp;" />
-            <marker date="1502348147002" expanded="true" signature="2900:2906" ph="&amp;nbsp;" />
-            <marker date="1502348147002" expanded="true" signature="3205:3273" ph="delete from " />
-            <marker date="1502348147002" expanded="true" signature="6579:6887" ph="INSERT INTO `lms_books`... " />
-            <marker date="1502348147002" expanded="true" signature="8068:8129" ph="select * fro... lms_books" />
-            <marker date="1502348147002" expanded="true" signature="8636:8647" ph="..." />
-            <marker date="1502348147002" expanded="true" signature="8845:8856" ph="..." />
-            <marker date="1502348147002" expanded="true" signature="10342:10353" ph="..." />
-            <marker date="1502348147002" expanded="true" signature="10584:10595" ph="..." />
-            <marker date="1502348147002" expanded="true" signature="10829:10840" ph="..." />
-            <marker date="1502348147002" expanded="true" signature="11070:11081" ph="..." />
-            <marker date="1502348147002" expanded="true" signature="11310:11321" ph="..." />
-            <marker date="1502348147002" expanded="true" signature="12636:12932" ph="update `lms_... " />
-            <marker date="1502348147002" expanded="true" signature="14170:14231" ph="select * fro... lms_books" />
-            <marker date="1502348147002" expanded="true" signature="15109:15169" ph="select * fro... lms_books" />
-            <marker date="1502348147002" expanded="true" signature="15298:15370" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/profile/assets/head.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
-          <caret line="27" column="37" lean-forward="true" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+          <caret line="27" column="37" lean-forward="false" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/profile/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="38" column="55" lean-forward="true" selection-start-line="38" selection-start-column="55" selection-end-line="38" selection-end-column="55" />
+        <state relative-caret-position="648">
+          <caret line="153" column="84" lean-forward="false" selection-start-line="153" selection-start-column="84" selection-end-line="153" selection-end-column="84" />
           <folding>
             <marker date="1502348808696" expanded="true" signature="2276:2334" ph="select * fro... lms_user" />
             <marker date="1502348808696" expanded="true" signature="3358:3451" ph="select * fro... lms_borrow" />
@@ -1423,63 +1381,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-816">
-          <caret line="39" column="44" lean-forward="true" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
-          <folding>
-            <marker date="1502349320765" expanded="true" signature="1763:1811" ph="select * fro... lms_books" />
-            <marker date="1502349320765" expanded="true" signature="4157:4217" ph="select * fro... lms_books" />
-            <marker date="1502349320765" expanded="true" signature="5006:5017" ph="..." />
-            <marker date="1502349320765" expanded="true" signature="5150:5161" ph="..." />
-            <marker date="1502349320765" expanded="true" signature="5604:5615" ph="..." />
-            <marker date="1502349320765" expanded="true" signature="6287:6382" ph="select * fro... lms_user" />
-            <marker date="1502349320765" expanded="true" signature="7145:7222" ph="update `lms_... " />
-            <marker date="1502349320765" expanded="true" signature="7345:7671" ph="INSERT INTO `lms_borrow`... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sidebar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="6" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#3;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#4;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#5;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="61" lean-forward="false" selection-start-line="2" selection-start-column="61" selection-end-line="2" selection-end-column="61" />
-          <folding>
-            <marker date="1502349502937" expanded="true" signature="50:532" ph="..." />
-            <marker date="1502349502937" expanded="true" signature="114:521" ph="..." />
-            <marker date="1502349502937" expanded="true" signature="175:506" ph="..." />
-            <marker date="1502349502937" expanded="false" signature="244:258" ph="..." />
-            <marker date="1502349502937" expanded="true" signature="259:487" ph="..." />
-            <marker date="1502349502937" expanded="true" signature="569:1814" ph="..." />
-            <marker date="1502349502937" expanded="true" signature="638:1803" ph="..." />
-            <marker date="1502349502937" expanded="true" signature="701:1788" ph="..." />
-            <marker date="1502349502937" expanded="true" signature="772:938" ph="..." />
-            <marker date="1502349502937" expanded="true" signature="1006:1744" ph="..." />
-            <marker date="1502349502937" expanded="true" signature="1071:1211" ph="..." />
-            <marker date="1502349502937" expanded="true" signature="1397:1721" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/borrowed.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
+        <state relative-caret-position="810">
           <caret line="45" column="80" lean-forward="false" selection-start-line="45" selection-start-column="80" selection-end-line="45" selection-end-column="80" />
           <folding>
             <marker date="1502347394589" expanded="true" signature="1660:1712" ph="select * fro... lms_borrow" />
@@ -1487,21 +1391,80 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/book_admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="41" column="59" lean-forward="false" selection-start-line="41" selection-start-column="59" selection-end-line="41" selection-end-column="59" />
+          <folding>
+            <marker date="1502377362798" expanded="true" signature="1842:1867" ph="select * fro... lms_books" />
+            <marker date="1502377362798" expanded="true" signature="3046:3052" ph="&amp;nbsp;" />
+            <marker date="1502377362798" expanded="true" signature="3052:3058" ph="&amp;nbsp;" />
+            <marker date="1502377362798" expanded="true" signature="3357:3425" ph="delete from " />
+            <marker date="1502377362798" expanded="true" signature="6731:7039" ph="INSERT INTO `lms_books`... " />
+            <marker date="1502377362798" expanded="true" signature="8220:8281" ph="select * fro... lms_books" />
+            <marker date="1502377362798" expanded="true" signature="8788:8799" ph="..." />
+            <marker date="1502377362798" expanded="true" signature="8997:9008" ph="..." />
+            <marker date="1502377362798" expanded="true" signature="10494:10505" ph="..." />
+            <marker date="1502377362798" expanded="true" signature="10736:10747" ph="..." />
+            <marker date="1502377362798" expanded="true" signature="10981:10992" ph="..." />
+            <marker date="1502377362798" expanded="true" signature="11222:11233" ph="..." />
+            <marker date="1502377362798" expanded="true" signature="11462:11473" ph="..." />
+            <marker date="1502377362798" expanded="true" signature="12788:13084" ph="update `lms_... " />
+            <marker date="1502377362798" expanded="true" signature="14322:14383" ph="select * fro... lms_books" />
+            <marker date="1502377362798" expanded="true" signature="15261:15321" ph="select * fro... lms_books" />
+            <marker date="1502377362798" expanded="true" signature="15450:15522" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/head.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="33" lean-forward="true" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
+        <state relative-caret-position="270">
+          <caret line="27" column="23" lean-forward="false" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
           <folding>
-            <marker date="1502349551049" expanded="true" signature="3373:3429" ph="select * fro... lms_user" />
-            <marker date="1502349551049" expanded="true" signature="3574:3585" ph="..." />
-            <marker date="1502349551049" expanded="true" signature="3713:3724" ph="..." />
-            <marker date="1502349551049" expanded="true" signature="3852:3863" ph="..." />
-            <marker date="1502349551049" expanded="true" signature="5032:5129" ph="UPDATE `lms_... " />
-            <marker date="1502349551049" expanded="true" signature="6401:6457" ph="select * fro... lms_user" />
-            <marker date="1502349551049" expanded="true" signature="6718:6729" ph="..." />
-            <marker date="1502349551049" expanded="true" signature="6950:6961" ph="..." />
-            <marker date="1502349551049" expanded="true" signature="7186:7197" ph="..." />
-            <marker date="1502349551049" expanded="true" signature="8046:8210" ph="UPDATE `lms_... " />
+            <marker date="1502377603636" expanded="true" signature="3373:3429" ph="select * fro... lms_user" />
+            <marker date="1502377603636" expanded="true" signature="3574:3585" ph="..." />
+            <marker date="1502377603636" expanded="true" signature="3713:3724" ph="..." />
+            <marker date="1502377603636" expanded="true" signature="3852:3863" ph="..." />
+            <marker date="1502377603636" expanded="true" signature="5032:5129" ph="UPDATE `lms_... " />
+            <marker date="1502377603636" expanded="true" signature="6401:6457" ph="select * fro... lms_user" />
+            <marker date="1502377603636" expanded="true" signature="6718:6729" ph="..." />
+            <marker date="1502377603636" expanded="true" signature="6950:6961" ph="..." />
+            <marker date="1502377603636" expanded="true" signature="7186:7197" ph="..." />
+            <marker date="1502377603636" expanded="true" signature="8046:8210" ph="UPDATE `lms_... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="80" lean-forward="true" selection-start-line="23" selection-start-column="80" selection-end-line="23" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sidebar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="47" column="98" lean-forward="true" selection-start-line="47" selection-start-column="98" selection-end-line="47" selection-end-column="98" />
+          <folding>
+            <marker date="1502378293005" expanded="true" signature="1889:1937" ph="select * fro... lms_books" />
+            <marker date="1502378293005" expanded="true" signature="4322:4382" ph="select * fro... lms_books" />
+            <marker date="1502378293005" expanded="true" signature="5171:5182" ph="..." />
+            <marker date="1502378293005" expanded="true" signature="5315:5326" ph="..." />
+            <marker date="1502378293005" expanded="true" signature="5769:5780" ph="..." />
+            <marker date="1502378293005" expanded="true" signature="6452:6547" ph="select * fro... lms_user" />
+            <marker date="1502378293005" expanded="true" signature="7310:7387" ph="update `lms_... " />
+            <marker date="1502378293005" expanded="true" signature="7510:7836" ph="INSERT INTO `lms_borrow`... " />
           </folding>
         </state>
       </provider>

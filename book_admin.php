@@ -36,8 +36,14 @@
 
     <div class="col-md-10">
         <div class="row">
-            <h3 align="center">图书管理</h3>
-            <div><a href="book_admin.php" class="btn btn-success">刷新</a>&nbsp;&nbsp;<button class="btn btn-primary" data-toggle="modal" data-target=".myModal1">添加图书</button></div><br/>
+            <div class="page-header">
+                <h1>图书管理</h1>
+            </div>
+            <div class="row gourpbtn" style="margin-left: 5px;">
+                <a href="book_admin.php" class="btn btn-success">刷新</a>
+                <button class="btn btn-primary" data-toggle="modal" data-target=".myModal1">添加图书</button>
+            </div>
+            <div></div><br/>
             <?php
                 include "config/config_inc.php";
                 mysqli_query($link,"set NAMES 'UTF8'");
