@@ -62,7 +62,7 @@
                         <?php
                             mysqli_query($link,"set NAMES 'UTF8'");
                             $borrowed=mysqli_query($link,"select * from `lms_borrow` where `stu_id` = '{$profile_row['id_card']}' and `if_return` = '1'");
-                            echo "<br/><table class='table'>";     //使用表格格式化数据
+                            echo "<br/><table class='table table-bordered table-striped table-hover'>";     //使用表格格式化数据
                             echo "<tr><th>借阅单号</th><th>书名</th><th>出版商</th><th>ISBN</th><th>借出日期</th><th>归还日期</th><th>操作</th></tr>";
                             while ($borrowed_row=mysqli_fetch_array($borrowed)){
                                 echo "<tr>";
@@ -82,7 +82,7 @@
                         <?php
                             mysqli_query($link,"set NAMES 'UTF8'");
                             $returned=mysqli_query($link,"select * from `lms_borrow` where `stu_id` = '{$_SESSION['IDCARD']}' and `if_return` = '0' or `if_return` = '2' ");
-                            echo "<br/><table class='table'>";     //使用表格格式化数据
+                            echo "<br/><table class='table table-bordered table-striped table-hover'>";     //使用表格格式化数据
                             echo "<tr><th>借阅单号</th><th>书名</th><th>出版商</th><th>ISBN</th><th>借出日期</th><th>归还日期</th><th>状态</th></tr>";
                             while ($returned_row=mysqli_fetch_array($returned)){
                                 echo "<tr>";
@@ -109,7 +109,7 @@
                         <?php
                             mysqli_query($link,"set NAMES 'UTF8'");
                             $delayed=mysqli_query($link,"select * from `lms_delay` where `applicant_id` = '{$_SESSION['IDCARD']}'");
-                            echo "<br/><table class='table'>";     //使用表格格式化数据
+                            echo "<br/><table class='table table-bordered table-striped table-hover'>";     //使用表格格式化数据
                             echo "<tr><th>申请序号</th><th>借阅序号</th><th>书名</th><th>出版商</th><th>迄</th><th>状态</th></tr>";
                             while ($delayed_row=mysqli_fetch_array($delayed)){
                                 echo "<tr>";
@@ -150,12 +150,12 @@
                             <?php
                                 $update_act=mysqli_query($link,"select * from `lms_user` where `id`='{$_GET['updateinfo']}'");
                                 $update_act_row=mysqli_fetch_array($update_act);
-                                echo "<p>姓名</p><br/>";
-                                echo "<input name='stu_name' class='form-control' type='text' style='width: auto' value='{$update_act_row['name']}'><br/>";
-                                echo "<p>学号/工号</p><br/>";
-                                echo "<input name='gen_id' class='form-control' type='text' style='width: auto' value='{$update_act_row['gen_id']}'><br/>";
-                                echo "<p>身份证号</p><br/>";
-                                echo "<input name='id_card' class='form-control' type='text' style='width: auto' value='{$update_act_row['id_card']}'><br/>";
+                                echo "<label for='stu_name'>姓名</label>";
+                                echo "<input name='stu_name' id='stu_name' class='form-control' type='text' style='width: auto' value='{$update_act_row['name']}'><br/>";
+                                echo "<label for='gen_id'>学号/工号</label>";
+                                echo "<input name='gen_id' id='gen_id' class='form-control' type='text' style='width: auto' value='{$update_act_row['gen_id']}'><br/>";
+                                echo "<label for='id_card'>身份证号</label>";
+                                echo "<input name='id_card' id='id_card' class='form-control' type='text' style='width: auto' value='{$update_act_row['id_card']}'><br/>";
                                 echo "<div class='modal-footer'><input type='hidden' name='update_id' value='{$_GET['updateinfo']}'><input type='submit' name='submit' value='确定' class='btn btn-primary'><button class='btn btn-default' data-dismiss='modal'>取消</button></div>";
                                 if (isset($_POST['submit'])){
                                     if ($_POST['stu_name'] == ''){

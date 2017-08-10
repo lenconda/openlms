@@ -37,12 +37,12 @@
     <div class="col-md-10">
         <div class="row">
             <h3 align="center">图书管理</h3>
-            <div><a href="book_admin.php" class="btn btn-success">刷新</a><button class="btn btn-primary" data-toggle="modal" data-target=".myModal1">添加图书</button></div><br/>
+            <div><a href="book_admin.php" class="btn btn-success">刷新</a>&nbsp;&nbsp;<button class="btn btn-primary" data-toggle="modal" data-target=".myModal1">添加图书</button></div><br/>
             <?php
                 include "config/config_inc.php";
                 mysqli_query($link,"set NAMES 'UTF8'");
                 $books=mysqli_query($link,"select * from `lms_books`");
-                echo "<br/><table class='table'>";     //使用表格格式化数据
+                echo "<br/><table class='table table-bordered table-striped table-hover'>";     //使用表格格式化数据
                 echo "<tr><th>ID</th><th>名称</th><th>类型</th><th>作者</th><th>ISBN</th><th>出版商</th><th>价格</th><th>总字数</th><th>入库时间</th><th>借阅次数</th><th>操作</th></tr>";
                 while ($books_row=mysqli_fetch_array($books)){
                     echo "<tr>";
@@ -56,7 +56,7 @@
                     echo "<td>".$books_row['page']."</td>";
                     echo "<td>".$books_row['intime']."</td>";
                     echo "<td>".$books_row['borrow']."</td>";
-                    echo "<td><div><form method='get' action='#'><button name='mod_book_id' class='btn btn-success' data-toggle='modal' data-target='.myModal2' value='{$books_row['id']}'>修改</button><button name='del_book_id' class='btn btn-danger' data-toggle='modal' data-target='.myModal3' value='{$books_row['id']}'>删除</button></form></div></td>";
+                    echo "<td><div><form method='get' action='#'><button name='mod_book_id' class='btn btn-success' data-toggle='modal' data-target='.myModal2' value='{$books_row['id']}'>修改</button>&nbsp;&nbsp;<button name='del_book_id' class='btn btn-danger' data-toggle='modal' data-target='.myModal3' value='{$books_row['id']}'>删除</button></form></div></td>";
                     echo "</tr>";
                 }
                 if (isset($_POST['delete'])){
@@ -140,10 +140,11 @@
                             //计时函数，获取借书时间
                             $borrow_date=date("Y-m-d",time());
                             echo "<h5>图书ID:   ".$_GET['mod_book_id']."</h5><br/>";
-                            echo "<p>图书名称</p>";
-                            echo "<form method='post'><input type='text' name='mod_name' class='form-control' style='width: auto' value='{$book_info_row['name']}'><br/>";
-                            echo "<p>图书类别</p>";
-                            echo "<select class='form-control' style='width: auto' name='mod_type'><br/>";
+                            echo "<form method='post'>";
+                            echo "<label for='mod_name'>图书名称</label>";
+                            echo "<input type='text' name='mod_name' id='mod_name' class='form-control' style='width: auto' value='{$book_info_row['name']}'><br/>";
+                            echo "<label for='mod_type'>图书类别</label>";
+                            echo "<select class='form-control' id='mod_type' style='width: auto' name='mod_type'><br/>";
                             echo "<br/><option value='经典著作'>经典著作</option>
                                     <option value='社会科学-政治法律'>社会科学-政治法律</option>
                                     <option value='军事科学-财经管理'>军事科学-财经管理</option>
@@ -162,16 +163,16 @@
                                     <option value='教材教辅'>教材教辅</option>        
                             </select><br/>";
 
-                            echo "<br/><p>图书作者/编者</p>";
-                            echo "<br/><input type='text' name='mod_author' class='form-control' style='width: auto' value='{$book_info_row['author']}'><br/>";
-                            echo "<p>图书出版商</p>";
-                            echo "<input type='text' name='mod_publisher' class='form-control' style='width: auto' value='{$book_info_row['publisher']}'><br/>";
-                            echo "<p>图书ISBN</p>";
-                            echo "<input type='number' name='mod_isbn' class='form-control' style='width: auto' value='{$book_info_row['isbn']}'><br/>";
-                            echo "<p>图书价格</p>";
-                            echo "<input type='number' name='mod_price' class='form-control' style='width: auto' value='{$book_info_row['price']}'><br/>";
-                            echo "<p>图书总字数</p>";
-                            echo "<input type='number' name='mod_page' class='form-control' style='width: auto' value='{$book_info_row['page']}'><br/>";
+                            echo "<br/><label for='mod_author'>图书作者/编者</label>";
+                            echo "<br/><input type='text' name='mod_author' id='mod_author' class='form-control' style='width: auto' value='{$book_info_row['author']}'><br/>";
+                            echo "<label for='mod_pub'>图书出版商</label>";
+                            echo "<input type='text' name='mod_publisher' id='mod_pub' class='form-control' style='width: auto' value='{$book_info_row['publisher']}'><br/>";
+                            echo "<label for='mod_isbn'>图书ISBN</label>";
+                            echo "<input type='number' name='mod_isbn' id='mod_isbn' class='form-control' style='width: auto' value='{$book_info_row['isbn']}'><br/>";
+                            echo "<label for='mod_price'>图书价格</label>";
+                            echo "<input type='number' name='mod_price' id='mod_price' class='form-control' style='width: auto' value='{$book_info_row['price']}'><br/>";
+                            echo "<label for='mod_page'>图书总字数</label>";
+                            echo "<input type='number' name='mod_page' id='mod_page' class='form-control' style='width: auto' value='{$book_info_row['page']}'><br/>";
                             echo "<div class='modal-footer'><input type='submit' class='btn btn-primary' name='update' value='确定'><button class='btn btn-default' data-dismiss='modal'>取消</button></div>";
                             //echo "<br/><div><input type='submit' name='submit' class='btn btn-primary' value='确定'><a href='index.php' class='btn btn-danger'>取消</a></div></form>";
                             if (isset($_POST['update'])){

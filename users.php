@@ -153,7 +153,7 @@
                             <input name="id_card" type="text" style="width: auto" class="form-control" placeholder="请输入身份证号"><br/>
                             <input name="pw" type="password" style="width: auto" class="form-control" placeholder="请输入密码"><br/>
                             <input name="re_pw" type="password" style="width: auto" class="form-control" placeholder="请再次输入密码"><br/>
-                            <div class="modal-footer"><input type="submit" class="btn btn-primary" name="add_admin" value="确定"><button class="btn btn-primary" data-dismiss="modal">取消</button></div><!--data-dismiss="modal"点击按钮之后可以关闭窗口-->
+                            <div class="modal-footer"><input type="submit" class="btn btn-primary" name="add_admin" value="确定"><button class="btn btn-default" data-dismiss="modal">取消</button></div><!--data-dismiss="modal"点击按钮之后可以关闭窗口-->
                         </form>
                         <?php
                         if (isset($_POST['add_admin'])){

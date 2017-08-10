@@ -33,7 +33,7 @@
                     if ($_GET['forward'] == '0') {
                         if ($_GET['search'] == 'books') {
                             $books = mysqli_query($link, "select * from `lms_books` where `name` like '%{$_GET['object']}%' order by `borrow` desc");
-                            echo "<br/><table class='table'>";     //使用表格格式化数据
+                            echo "<br/><table class='table table-bordered table-striped table-hover'>";     //使用表格格式化数据
                             echo "<tr><th>ID</th><th>名称</th><th>类型</th><th>作者</th><th>ISBN</th><th>出版商</th><th>价格</th><th>页数</th><th>入库时间</th><th>借阅次数</th><th>操作</th></tr>";
                             while ($books_row = mysqli_fetch_array($books)) {
                                 echo "<tr>";
@@ -53,7 +53,7 @@
                             echo "</table>";
                         } elseif ($_GET['search'] == 'readers') {
                             $readers = mysqli_query($link, "select * from `lms_user` where (`name` like '%{$_GET['object']}%' or `gen_id` like '%{$_GET['object']}%' or `id_card` like '%{$_GET['object']}%') and `admin` = '1'");
-                            echo "<br/><table class='table'>";     //使用表格格式化数据
+                            echo "<br/><table class='table table-bordered table-striped table-hover'>";     //使用表格格式化数据
                             echo "<tr><th>UID</th><th>姓名</th><th>学号/工号</th><th>身份证号</th><th>操作</th></tr>";
                             while ($read_readers_row = mysqli_fetch_array($readers)) {
                                 echo "<tr>";
@@ -67,7 +67,7 @@
                             echo "</table>";
                         } elseif ($_GET['search'] == 'borrow') {
                             $borrowed = mysqli_query($link, "select * from `lms_borrow` where (`book_name` like '%{$_GET['object']}%' or `book_isbn` like '%{$_GET['object']}%' or `book_publisher` like '%{$_GET['object']}%' or `stu_name` like '%{$_GET['object']}%' or `stu_id` like '%{$_GET['object']}%') and 'if_return' = '1'");
-                            echo "<br/><table class='table'>";     //使用表格格式化数据
+                            echo "<br/><table class='table table-bordered table-striped table-hover'>";     //使用表格格式化数据
                             echo "<tr><th>借阅单号</th><th>图书名称</th><th>ISBN</th><th>出版商</th><th>借阅人姓名</th><th>身份证号</th><th>借阅时间</th><th>归还时间</th><th>是否归还</th></tr>";
                             while ($books_borrowed = mysqli_fetch_array($borrowed)) {
                                 echo "<tr>";
@@ -91,7 +91,7 @@
                             echo "</table>";
                         }elseif ($_GET['search'] == 'return') {
                             $returned = mysqli_query($link, "select * from `lms_borrow` where (`book_name` like '%{$_GET['object']}%' or `book_isbn` like '%{$_GET['object']}%' or `book_publisher` like '%{$_GET['object']}%' or `stu_name` like '%{$_GET['object']}%' or `stu_id` like '%{$_GET['object']}%') and 'if_return' = '0'");
-                            echo "<br/><table class='table'>";     //使用表格格式化数据
+                            echo "<br/><table class='table table-bordered table-striped table-hover'>";     //使用表格格式化数据
                             echo "<tr><th>借阅单号</th><th>图书名称</th><th>ISBN</th><th>出版商</th><th>借阅人姓名</th><th>身份证号</th><th>借阅时间</th><th>归还时间</th><th>状态</th></tr>";
                             while ($books_returned = mysqli_fetch_array($returned)) {
                                 echo "<tr>";
@@ -115,7 +115,7 @@
                             echo "</table>";
                         }elseif ($_GET['search'] == 'delay'){
                             $delayed=mysqli_query($link,"select * from `lms_delay` where `book_name` like '%{$_GET['object']}%' or `book_publisher` like '%{$_GET['object']}%' or `applicant_name` like '%{$_GET['object']}%' or `applicant_id` like '%{$_GET['object']}%'");
-                            echo "<br/><table class='table'>";     //使用表格格式化数据
+                            echo "<br/><table class='table table-bordered table-striped table-hover'>";     //使用表格格式化数据
                             echo "<tr><th>申请序号</th><th>图书名称</th><th>出版商</th><th>申请人姓名</th><th>身份证号</th><th>延迟到</th><th>操作</th></tr>";
                             while ($delayed_row=mysqli_fetch_array($delayed)){
                                 echo "<tr>";
@@ -137,7 +137,7 @@
                     }elseif ($_GET['forward'] == '1'){
                         if ($_GET['search'] == 'books'){
                             $reader_books=mysqli_query($link, "select * from `lms_books` where `name` like '%{$_GET['object']}%' order by `borrow` desc");
-                            echo "<br/><table class='table'>";     //使用表格格式化数据
+                            echo "<br/><table class='table table-bordered table-striped table-hover'>";     //使用表格格式化数据
                             echo "<tr><th>ID</th><th>名称</th><th>类型</th><th>作者</th><th>ISBN</th><th>出版商</th><th>价格</th><th>页数</th><th>入库时间</th><th>借阅次数</th></tr>";
                             while ($reader_books_row = mysqli_fetch_array($reader_books)) {
                                 echo "<tr>";
@@ -156,7 +156,7 @@
                             echo "</table>";
                         }elseif ($_GET['search'] == 'borrowed'){
                             $reader_borrowed=mysqli_query($link,"select * from `lms_borrow` where (`book_name` like '%{$_GET['object']}%' or `book_isbn` like '%{$_GET['object']}%' or `book_publisher` like '%{$_GET['object']}%') and `stu_id` = '{$_SESSION['IDCARD']}'");
-                            echo "<br/><table class='table'>";     //使用表格格式化数据
+                            echo "<br/><table class='table table-bordered table-striped table-hover'>";     //使用表格格式化数据
                             echo "<tr><th>借阅单号</th><th>图书名称</th><th>ISBN</th><th>出版商</th><th>借阅时间</th><th>归还时间</th><th>是否归还</th></tr>";
                             while ($reader_borrowed_row = mysqli_fetch_array($reader_borrowed)) {
                                 echo "<tr>";
@@ -180,7 +180,7 @@
                             echo "</table>";
                         }elseif ($_GET['search'] == 'returned') {
                             $reader_returned = mysqli_query($link, "select * from `lms_borrow` where (`book_name` like '%{$_GET['object']}%' or `book_isbn` like '%{$_GET['object']}%' or `book_publisher` like '%{$_GET['object']}%') and `stu_id` = '{$_SESSION['IDCARD']}'");
-                            echo "<br/><table class='table'>";     //使用表格格式化数据
+                            echo "<br/><table class='table table-bordered table-striped table-hover'>";     //使用表格格式化数据
                             echo "<tr><th>借阅单号</th><th>图书名称</th><th>ISBN</th><th>出版商</th><th>借阅时间</th><th>归还时间</th></tr>";
                             while ($reader_returned_row = mysqli_fetch_array($reader_returned)) {
                                 echo "<tr>";
@@ -195,7 +195,7 @@
                             echo "</table>";
                         }elseif ($_GET['search'] == 'delay'){
                             $reader_delay=mysqli_query($link,"select * from `lms_delay` where (`book_name` like '%{$_GET['object']}%' or `book_publisher` like '%{$_GET['object']}%' or `applicant_name` like '%{$_GET['object']}%' or `applicant_id` like '%{$_GET['object']}%') and `applicant_id` = '{$_SESSION['IDCARD']}'");
-                            echo "<br/><table class='table'>";     //使用表格格式化数据
+                            echo "<br/><table class='table table-bordered table-striped table-hover'>";     //使用表格格式化数据
                             echo "<tr><th>申请序号</th><th>借阅序号</th><th>书名</th><th>出版商</th><th>迄</th><th>状态</th></tr>";
                             while ($reader_delay_row=mysqli_fetch_array($reader_delay)){
                                 echo "<tr>";

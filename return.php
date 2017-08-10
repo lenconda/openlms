@@ -42,7 +42,7 @@
                 include "config/config_inc.php";
                 mysqli_query($link,"set NAMES 'UTF8'");
                 $books=mysqli_query($link,"select * from `lms_borrow` where `if_return`='1'");
-                echo "<br/><table class='table'>";     //使用表格格式化数据
+                echo "<br/><table class='table table-bordered table-striped table-hover'>";     //使用表格格式化数据
                 echo "<tr><th>借阅序号</th><th>图书名称</th><th>ISBN</th><th>出版商</th><th>借阅人姓名</th><th>身份证号</th><th>借阅时间</th><th>归还时间</th><th>操作</th></tr>";
                 while ($books_return=mysqli_fetch_array($books)){
                     echo "<tr>";
