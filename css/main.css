@@ -1,0 +1,31 @@
+body{
+
+}
+.sidebar{
+    position:fixed;
+    top:52px;
+    left:0;
+    bottom:0;
+    background: #f5f5f5;
+    padding:20px 0 0 0;
+}
+@media (max-width:768px){
+    .sidebar{
+        display: none;
+    }
+}
+.nav-sidebar li a:hover,
+.nav-sidebar li a:active,
+.nav-sidebar li a:focus {
+    color: #fff;
+    background-color: #428bca;
+}
+.gourpbtn{
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.nav-footer{
+    position: relative;
+    width:0;
+    bottom:0;
+}

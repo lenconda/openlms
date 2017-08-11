@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
     <link href="css/bootstrap-datetimepicker.css" type="text/css" rel="stylesheet">
     <link href="css/component.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="css/styles.css" type="text/css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -17,7 +17,7 @@
     <script src="js/jquery-1.9.1.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap-datetimepicker.js"></script>
-    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="css/main.css" type="text/css"/>
     <title>图书管理系统</title>
     <?php
         include "config/config_inc.php";
@@ -41,7 +41,7 @@
             <?php
             include "assets/sidebar.php";
             ?>
-            <div class="col-md-10">
+            <div class="col-md-10 col-md-offset-2">
                 <div class="page-header">
                     <h1>延迟归还申请</h1>
                 </div>

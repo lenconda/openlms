@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
     <link href="css/component.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="css/styles.css" type="text/css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -15,7 +15,7 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <script src="js/jquery-1.9.1.js"></script>
     <script src="js/bootstrap.js"></script>
-    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="css/main.css" type="text/css"/>
     <title>图书管理系统</title>
     <?php
         include "config/config_inc.php";
@@ -39,13 +39,13 @@
             <?php
                 include "assets/sidebar.php";
             ?>
-            <div class="col-md-10">
+            <div class="col-md-10 col-md-offset-2">
                 <div class="page-header">
                     <h1>图书管理</h1>
                 </div>
                 <div class="row gourpbtn" style="margin-left: 5px;">
                     <a href="book_admin.php" class="btn btn-success">刷新</a>
-                    <button class="btn btn-primary" data-toggle="modal" data-target=".myModal1">添加图书</button>
+                    <button class="btn btn-warning" data-toggle="modal" data-target=".myModal1">添加图书</button>
                 </div>
                 <div></div><br/>
                 <?php

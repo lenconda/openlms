@@ -33,6 +33,12 @@
                             <li><a href="book_admin.php">图书管理</a></li>
                             <li><a href="users.php">用户管理</a></li>
                             <li role="separator" class="divider"></li>
+                            <li><a href="index.php">图书借阅</a></li>
+                            <li><a href="return.php">图书归还</a></li>
+                            <li><a href="borrowed.php">借出记录</a></li>
+                            <li><a href="returned.php">归还记录</a></li>
+                            <li><a href="delay.php">延迟归还申请</a></li>
+                            <li role="separator" class="divider"></li>
                             <li><a data-toggle="modal" data-target=".myModal_Modpf">修改信息</a></li>
                             <li><a data-toggle="modal" data-target=".myModal_Modpw">修改密码</a></li>
                             <li role="separator" class="divider"></li>

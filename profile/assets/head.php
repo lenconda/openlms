@@ -28,7 +28,11 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php session_start(); echo $_SESSION['NAME'];?><span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">个人中心</a></li>
+                        <li><a href="index.php">个人资料</a></li>
+                        <li><a href="borrowed.php">借书记录</a></li>
+                        <li><a href="returned.php">归还记录</a></li>
+                        <li><a href="delay.php">延迟归还申请</a></li>
+                        <li role="separator" class="divider"></li>
                         <li><a href="../logout.php?action=logout">退出登录</a></li>
                     </ul>
                 </li>

@@ -5,7 +5,7 @@
       <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
       <link href="css/bootstrap-datetimepicker.css" type="text/css" rel="stylesheet">
       <link href="css/component.css" type="text/css" rel="stylesheet">
-      <link rel="stylesheet" href="css/style.css" type="text/css"/>
+      <link rel="stylesheet" href="css/styles.css" type="text/css"/>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -17,7 +17,7 @@
       <script src="js/jquery-1.9.1.js"></script>
       <script src="js/bootstrap.js"></script>
       <script src="js/bootstrap-datetimepicker.js"></script>
-      <link rel="stylesheet" href="css/style.css" type="text/css"/>
+      <link rel="stylesheet" href="css/main.css" type="text/css"/>
       <title>图书管理系统</title>
       <?php
           include "config/config_inc.php";
@@ -41,14 +41,14 @@
                 <?php
                 include "assets/sidebar.php";
                 ?>
-                <div class="col-md-10">
+                <div class="col-md-10 col-md-offset-2">
                     <div class="page-header">
                         <h1>用户管理</h1>
                     </div>
                         <div class="groupbtn">
                             <button class="btn btn-default" data-toggle="modal" data-target='.myModal1'>添加读者</button>
                             <button class="btn btn-warning" data-toggle="modal" data-target='.myModal2'>添加管理员</button>
-                        </div>
+                        </div><br/>
                         <ul id="myTab" class="nav nav-tabs">
                             <li class="active"><a href="#readers" data-toggle="tab">读者</a></li>
                             <li><a href="#admin" data-toggle="tab">管理员</a></li>
@@ -204,7 +204,7 @@
                             echo "</div>";
                             echo "<div class='modal-body'>";
                             echo "<h5 style='color: red'>请注意，此操作不可逆！</h5>";
-                            echo "<div class='modal-footer'><form method='post'><input type='hidden' value='{$_GET['bl_id']}' name='black_id'><input type='submit' value='确定' name='ok' class='btn btn-danger'><button class='btn btn-primary' data-dismiss='modal'>取消</button></form></div>";
+                            echo "<div class='modal-footer'><form method='post'><input type='hidden' value='{$_GET['bl_id']}' name='black_id'><input type='submit' value='确定' name='ok' class='btn btn-danger'><button class='btn btn-default' data-dismiss='modal'>取消</button></form></div>";
                             echo "</div>";
                             if (isset($_POST['ok'])){
                                 $blacklist_act=mysqli_query($link,"delete from `lms_user` where `lms_user`.`id`='{$_POST['black_id']}'");

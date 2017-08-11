@@ -5,7 +5,7 @@
       <link rel="stylesheet" type="text/css" href="../bootstrap/bootstrap.css">
       <link href="../css/bootstrap-datetimepicker.css" type="text/css" rel="stylesheet">
       <link href="../css/component.css" type="text/css" rel="stylesheet">
-      <link href="../css/style.css" rel="stylesheet" type="text/css"/>
+      <link href="../css/main.css" rel="stylesheet" type="text/css"/>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -40,7 +40,7 @@
                     include "assets/sidebar.php";
                 ?>
                 <div class="panel-body">
-                    <div class="col-md-10">
+                    <div class="col-md-10 col-md-offset-2">
                         <div class="page-header">
                             <h1>个人资料</h1>
                         </div>
