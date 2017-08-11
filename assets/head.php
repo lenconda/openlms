@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-default">
     <div class="container">
         <!--响应式导航栏-->
         <div class="row">
@@ -123,6 +123,8 @@
                                         echo "<script>alert('修改失败')</script>";
                                     }else{
                                         echo "<script>alert('修改成功')</script>";
+                                        $_SESSION['NAME']=$_POST['stu_name'];
+                                        $_SESSION['IDCARD']=$_POST['id_card'];
                                         echo "<script>window.location.href='jump.php?jump=index.php'</script>";
                                     }
                                 }

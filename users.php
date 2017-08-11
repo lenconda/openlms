@@ -5,6 +5,7 @@
       <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
       <link href="css/bootstrap-datetimepicker.css" type="text/css" rel="stylesheet">
       <link href="css/component.css" type="text/css" rel="stylesheet">
+      <link rel="stylesheet" href="css/style.css" type="text/css"/>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -16,6 +17,7 @@
       <script src="js/jquery-1.9.1.js"></script>
       <script src="js/bootstrap.js"></script>
       <script src="js/bootstrap-datetimepicker.js"></script>
+      <link rel="stylesheet" href="css/style.css" type="text/css"/>
       <title>图书管理系统</title>
       <?php
           include "config/config_inc.php";
@@ -33,63 +35,66 @@
   <body>
         <?php
             include "assets/head.php";
-            include "assets/sidebar.php";
         ?>
-
-        <div class="col-md-10">
+        <div class="container-fluid">
             <div class="row">
-                <div align="center"><h3>用户管理</h3></div>
-                <div class="btn-group">
-                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">添加用户<span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                        <li><a data-toggle="modal" data-target='.myModal1'>添加读者</a></li>
-                        <li><a data-toggle="modal" data-target='.myModal2'>添加管理员</a></li>
-                    </ul><br/>
-                </div><br/>
-                <ul id="myTab" class="nav nav-tabs">
-                    <li class="active"><a href="#readers" data-toggle="tab">读者</a></li>
-                    <li><a href="#admin" data-toggle="tab">管理员</a></li>
-                </ul>
-                <div id="myTabContent" class="tab-content">
-                    <div class="tab-pane fade in active" id="readers">
-                        <?php
-                            mysqli_query($link,"set NAMES 'UTF8'");
-                            $read_readers=mysqli_query($link,"select * from `lms_user` where `admin` = '1'");
-                            echo "<br/><table class='table'>";     //使用表格格式化数据
-                            echo "<tr><th>UID</th><th>姓名</th><th>学号/工号</th><th>身份证号</th><th>操作</th></tr>";
-                            while ($read_readers_row=mysqli_fetch_array($read_readers)){
-                                echo "<tr>";
-                                echo "<td>".$read_readers_row['id']."</td>";
-                                echo "<td>".$read_readers_row['name']."</td>";
-                                echo "<td>".$read_readers_row['gen_id']."</td>";
-                                echo "<td>".$read_readers_row['id_card']."</td>";
-                                echo "<td><div><form method='get' action='#'><button name='bl_id' class='btn btn-danger' data-toggle='modal' data-target='.Blacklist' value='{$read_readers_row['id']}'>拉黑</button></form></div></td>";
-                                echo "</tr>";
-                            }
-                            echo "</table>";
-                        ?>
+                <?php
+                include "assets/sidebar.php";
+                ?>
+                <div class="col-md-10">
+                    <div class="page-header">
+                        <h1>用户管理</h1>
                     </div>
-                    <div class="tab-pane fade" id="admin">
-                        <?php
-                            mysqli_query($link,"set NAMES 'UTF8'");
-                            $read_admin=mysqli_query($link,"select * from `lms_user` where `admin` = '0'");
-                            echo "<br/><table class='table'>";     //使用表格格式化数据
-                            echo "<tr><th>UID</th><th>姓名</th><th>学号/工号</th><th>身份证号</th></tr>";
-                            while ($read_admin_row=mysqli_fetch_array($read_admin)){
-                                echo "<tr>";
-                                echo "<td>".$read_admin_row['id']."</td>";
-                                echo "<td>".$read_admin_row['name']."</td>";
-                                echo "<td>".$read_admin_row['gen_id']."</td>";
-                                echo "<td>".$read_admin_row['id_card']."</td>";
-                                echo "</tr>";
-                            }
-                            echo "</table>";
-                        ?>
-                    </div>
+                        <div class="groupbtn">
+                            <button class="btn btn-default" data-toggle="modal" data-target='.myModal1'>添加读者</button>
+                            <button class="btn btn-warning" data-toggle="modal" data-target='.myModal2'>添加管理员</button>
+                        </div>
+                        <ul id="myTab" class="nav nav-tabs">
+                            <li class="active"><a href="#readers" data-toggle="tab">读者</a></li>
+                            <li><a href="#admin" data-toggle="tab">管理员</a></li>
+                        </ul>
+                        <div id="myTabContent" class="tab-content">
+                            <div class="tab-pane fade in active" id="readers">
+                                <?php
+                                mysqli_query($link,"set NAMES 'UTF8'");
+                                $read_readers=mysqli_query($link,"select * from `lms_user` where `admin` = '1'");
+                                echo "<br/><table class='table table-bordered table-striped table-hover'>";     //使用表格格式化数据
+                                echo "<tr><th>UID</th><th>姓名</th><th>学号/工号</th><th>身份证号</th><th>操作</th></tr>";
+                                while ($read_readers_row=mysqli_fetch_array($read_readers)){
+                                    echo "<tr>";
+                                    echo "<td>".$read_readers_row['id']."</td>";
+                                    echo "<td>".$read_readers_row['name']."</td>";
+                                    echo "<td>".$read_readers_row['gen_id']."</td>";
+                                    echo "<td>".$read_readers_row['id_card']."</td>";
+                                    echo "<td><div><form method='get' action='#'><button name='bl_id' class='btn btn-danger' data-toggle='modal' data-target='.Blacklist' value='{$read_readers_row['id']}'>拉黑</button></form></div></td>";
+                                    echo "</tr>";
+                                }
+                                echo "</table>";
+                                ?>
+                            </div>
+                            <div class="tab-pane fade" id="admin">
+                                <?php
+                                mysqli_query($link,"set NAMES 'UTF8'");
+                                $read_admin=mysqli_query($link,"select * from `lms_user` where `admin` = '0'");
+                                echo "<br/><table class='table table-bordered table-striped table-hover'>";     //使用表格格式化数据
+                                echo "<tr><th>UID</th><th>姓名</th><th>学号/工号</th><th>身份证号</th></tr>";
+                                while ($read_admin_row=mysqli_fetch_array($read_admin)){
+                                    echo "<tr>";
+                                    echo "<td>".$read_admin_row['id']."</td>";
+                                    echo "<td>".$read_admin_row['name']."</td>";
+                                    echo "<td>".$read_admin_row['gen_id']."</td>";
+                                    echo "<td>".$read_admin_row['id_card']."</td>";
+                                    echo "</tr>";
+                                }
+                                echo "</table>";
+                                ?>
+                            </div>
+                        </div>
+                        <!--<form action="borrow.php" method="get" target="_blank"><button class="btn btn-danger" type="submit">借出</button></form>-->
+                        <script src="js/classie.js"></script>
+                        <script src="js/modalEffects.js"></script>
                 </div>
-                <!--<form action="borrow.php" method="get" target="_blank"><button class="btn btn-danger" type="submit">借出</button></form>-->
-                <script src="js/classie.js"></script>
-                <script src="js/modalEffects.js"></script>
+
             </div>
         </div>
         <div class="modal fade myModal1"><!--modal,弹出层父级,fade使弹出层有一个运动过程-->

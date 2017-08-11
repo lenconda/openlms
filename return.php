@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
     <link href="css/bootstrap-datetimepicker.css" type="text/css" rel="stylesheet">
     <link href="css/component.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -16,6 +17,7 @@
     <script src="js/jquery-1.9.1.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap-datetimepicker.js"></script>
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
     <title>图书管理系统</title>
     <?php
         include "config/config_inc.php";
@@ -33,36 +35,42 @@
 <body>
     <?php
         include "assets/head.php";
-        include "assets/sidebar.php";
     ?>
-    <div class="col-md-10">
+    <div class="container-fluid">
         <div class="row">
-            <div align="center"><h3>图书归还</h3></div>
             <?php
-                include "config/config_inc.php";
-                mysqli_query($link,"set NAMES 'UTF8'");
-                $books=mysqli_query($link,"select * from `lms_borrow` where `if_return`='1'");
-                echo "<br/><table class='table table-bordered table-striped table-hover'>";     //使用表格格式化数据
-                echo "<tr><th>借阅序号</th><th>图书名称</th><th>ISBN</th><th>出版商</th><th>借阅人姓名</th><th>身份证号</th><th>借阅时间</th><th>归还时间</th><th>操作</th></tr>";
-                while ($books_return=mysqli_fetch_array($books)){
-                    echo "<tr>";
-                    echo "<td>".$books_return['id']."</td>";
-                    echo "<td>".$books_return['book_name']."</td>";
-                    echo "<td>".$books_return['book_isbn']."</td>";
-                    echo "<td>".$books_return['book_publisher']."</td>";
-                    echo "<td>".$books_return['stu_name']."</td>";
-                    echo "<td>".$books_return['stu_id']."</td>";
-                    echo "<td>".$books_return['borrow_time']."</td>";
-                    echo "<td>".$books_return['return_time']."</td>";
-                    //echo "<td>".$books_borrowed['intime']."</td>";
-                    //echo "<td>".$books_borrowed['borrow']."</td>";
-                    echo "<td><div><form method='get' action='#'><button name='rt_book_id' class='btn btn-primary' data-toggle='modal' data-target='.myModal1' value='{$books_return['id']}'>归还</button></form></div></td>";
-                    echo "</tr>";
-                }
+                include "assets/sidebar.php";
             ?>
-            <!--<form action="borrow.php" method="get" target="_blank"><button class="btn btn-danger" type="submit">借出</button></form>-->
-            <script src="js/classie.js"></script>
-            <script src="js/modalEffects.js"></script>
+            <div class="col-md-10">
+                <div class="page-header">
+                    <h1>图书归还</h1>
+                </div>
+                    <?php
+                        include "config/config_inc.php";
+                        mysqli_query($link,"set NAMES 'UTF8'");
+                        $books=mysqli_query($link,"select * from `lms_borrow` where `if_return`='1'");
+                        echo "<br/><table class='table table-bordered table-striped table-hover'>";     //使用表格格式化数据
+                        echo "<tr><th>借阅序号</th><th>图书名称</th><th>ISBN</th><th>出版商</th><th>借阅人姓名</th><th>身份证号</th><th>借阅时间</th><th>归还时间</th><th>操作</th></tr>";
+                        while ($books_return=mysqli_fetch_array($books)){
+                            echo "<tr>";
+                            echo "<td>".$books_return['id']."</td>";
+                            echo "<td>".$books_return['book_name']."</td>";
+                            echo "<td>".$books_return['book_isbn']."</td>";
+                            echo "<td>".$books_return['book_publisher']."</td>";
+                            echo "<td>".$books_return['stu_name']."</td>";
+                            echo "<td>".$books_return['stu_id']."</td>";
+                            echo "<td>".$books_return['borrow_time']."</td>";
+                            echo "<td>".$books_return['return_time']."</td>";
+                            //echo "<td>".$books_borrowed['intime']."</td>";
+                            //echo "<td>".$books_borrowed['borrow']."</td>";
+                            echo "<td><div><form method='get' action='#'><button name='rt_book_id' class='btn btn-primary' data-toggle='modal' data-target='.myModal1' value='{$books_return['id']}'>归还</button></form></div></td>";
+                            echo "</tr>";
+                        }
+                    ?>
+                    <!--<form action="borrow.php" method="get" target="_blank"><button class="btn btn-danger" type="submit">借出</button></form>-->
+                    <script src="js/classie.js"></script>
+                    <script src="js/modalEffects.js"></script>
+            </div>
         </div>
     </div>
     <div class="modal fade myModal1"><!--modal,弹出层父级,fade使弹出层有一个运动过程-->

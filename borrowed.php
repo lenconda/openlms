@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
     <link href="css/bootstrap-datetimepicker.css" type="text/css" rel="stylesheet">
     <link href="css/component.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -16,6 +17,7 @@
     <script src="js/jquery-1.9.1.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap-datetimepicker.js"></script>
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
     <title>图书管理系统</title>
     <?php
         include "config/config_inc.php";
@@ -33,12 +35,17 @@
 <body>
     <?php
         include "assets/head.php";
-        include "assets/sidebar.php";
     ?>
-    <div class="col-md-10">
+    <div class="container-fluid">
         <div class="row">
-            <div align="center"><h3>图书借出记录</h3></div>
             <?php
+            include "assets/sidebar.php";
+            ?>
+            <div class="col-md-10">
+                <div class="page-header">
+                    <h1>图书借出记录</h1>
+                </div>
+                <?php
                 include "config/config_inc.php";
                 mysqli_query($link,"set NAMES 'UTF8'");
                 $books=mysqli_query($link,"select * from `lms_borrow` order by `if_return` desc");
@@ -65,11 +72,11 @@
                     }
                     echo "</tr>";
                 }
-            ?>
-            <!--<form action="borrow.php" method="get" target="_blank"><button class="btn btn-danger" type="submit">借出</button></form>-->
-            <script src="js/classie.js"></script>
-            <script src="js/modalEffects.js"></script>
-
+                ?>
+                <!--<form action="borrow.php" method="get" target="_blank"><button class="btn btn-danger" type="submit">借出</button></form>-->
+                <script src="js/classie.js"></script>
+                <script src="js/modalEffects.js"></script>
+            </div>
         </div>
     </div>
     <?php include "assets/footer.php";?>

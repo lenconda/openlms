@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
     <link href="css/bootstrap-datetimepicker.css" type="text/css" rel="stylesheet">
     <link href="css/component.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -16,6 +17,7 @@
     <script src="js/jquery-1.9.1.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap-datetimepicker.js"></script>
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
     <title>图书管理系统</title>
     <?php
         include "config/config_inc.php";
@@ -33,37 +35,43 @@
 <body>
     <?php
         include "assets/head.php";
-        include "assets/sidebar.php";
     ?>
-    <div class="col-md-10">
+    <div class="container-fluid">
         <div class="row">
-            <div align="center"><h3>延迟归还申请</h3></div>
             <?php
-                include "config/config_inc.php";
-                mysqli_query($link,"set NAMES 'UTF8'");
-                $delayed=mysqli_query($link,"select * from `lms_delay` order by `passed`");
-                echo "<br/><table class='table table-bordered table-striped table-hover'>";     //使用表格格式化数据
-                echo "<tr><th>申请序号</th><th>借阅序号</th><th>图书名称</th><th>出版商</th><th>申请人姓名</th><th>身份证号</th><th>延迟到</th><th>操作</th></tr>";
-                while ($delayed_row=mysqli_fetch_array($delayed)){
-                    echo "<tr>";
-                    echo "<td>".$delayed_row['id']."</td>";
-                    echo "<td>".$delayed_row['book_id']."</td>";
-                    echo "<td>".$delayed_row['book_name']."</td>";
-                    echo "<td>".$delayed_row['book_publisher']."</td>";
-                    echo "<td>".$delayed_row['applicant_name']."</td>";
-                    echo "<td>".$delayed_row['applicant_id']."</td>";
-                    echo "<td>".$delayed_row['return_time']."</td>";
-                    if ($delayed_row['passed'] == '1') {
-                        echo "<td><div><form method='get' action='#'><button name='rl_book_id' class='btn btn-primary' data-toggle='modal' data-target='.myModal1' value='{$delayed_row['id']}'>批准</button></form></div></td>";
-                    }else{
-                        echo "<td>已批准</td>";
-                    }
-                    echo "</tr></table>";
-                }
+            include "assets/sidebar.php";
             ?>
-            <!--<form action="borrow.php" method="get" target="_blank"><button class="btn btn-danger" type="submit">借出</button></form>-->
-            <script src="js/classie.js"></script>
-            <script src="js/modalEffects.js"></script>
+            <div class="col-md-10">
+                <div class="page-header">
+                    <h1>延迟归还申请</h1>
+                </div>
+                    <?php
+                    include "config/config_inc.php";
+                    mysqli_query($link,"set NAMES 'UTF8'");
+                    $delayed=mysqli_query($link,"select * from `lms_delay` order by `passed`");
+                    echo "<br/><table class='table table-bordered table-striped table-hover'>";     //使用表格格式化数据
+                    echo "<tr><th>申请序号</th><th>借阅序号</th><th>图书名称</th><th>出版商</th><th>申请人姓名</th><th>身份证号</th><th>延迟到</th><th>操作</th></tr>";
+                    while ($delayed_row=mysqli_fetch_array($delayed)){
+                        echo "<tr>";
+                        echo "<td>".$delayed_row['id']."</td>";
+                        echo "<td>".$delayed_row['book_id']."</td>";
+                        echo "<td>".$delayed_row['book_name']."</td>";
+                        echo "<td>".$delayed_row['book_publisher']."</td>";
+                        echo "<td>".$delayed_row['applicant_name']."</td>";
+                        echo "<td>".$delayed_row['applicant_id']."</td>";
+                        echo "<td>".$delayed_row['return_time']."</td>";
+                        if ($delayed_row['passed'] == '1') {
+                            echo "<td><div><form method='get' action='#'><button name='rl_book_id' class='btn btn-primary' data-toggle='modal' data-target='.myModal1' value='{$delayed_row['id']}'>批准</button></form></div></td>";
+                        }else{
+                            echo "<td>已批准</td>";
+                        }
+                        echo "</tr></table>";
+                    }
+                    ?>
+                    <!--<form action="borrow.php" method="get" target="_blank"><button class="btn btn-danger" type="submit">借出</button></form>-->
+                    <script src="js/classie.js"></script>
+                    <script src="js/modalEffects.js"></script>
+            </div>
         </div>
     </div>
     <div class="modal fade myModal1"><!--modal,弹出层父级,fade使弹出层有一个运动过程-->
