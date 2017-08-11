@@ -2,8 +2,8 @@
 
 ## Screenshots
 
-  ![screenshot1](http://lenconda.github.io/screenshot1.png)
-  ![screenshot2](http://lenconda.github.io/screenshot2.png)
+  ![screenshot1](http://lenconda.github.io/mac1.png)
+  ![screenshot2](http://lenconda.github.io/mac2.png)
 
 ## Features
   - Add,delete and update books in library;
