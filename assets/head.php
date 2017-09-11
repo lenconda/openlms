@@ -1,3 +1,9 @@
+<!--
+Copyright (c) 2017 Peng Hanlin.
+The software is published under the Apache License v2.0.
+Authorized by Peng Hanlin in Nanchang, China.
+Monday, 11, September, 2017
+-->
 <nav class="navbar navbar-default">
     <div class="container">
         <!--响应式导航栏-->
@@ -71,14 +77,14 @@
                             if (isset($_POST['modpw'])){
                                 if ($_POST['oldpw'] == ''){
                                     echo "<script>alert('未输入原密码')</script>";
-                                }elseif($_POST['oldpw'] != $admin_info_row['password']){
+                                }elseif($_POST['oldpw'] != $admin_info_row['password']){/*旧密码的确认*/
                                     echo "<script>alert('原密码输入错误')</script>";
                                 }elseif($_POST['newpw'] == ''){
                                     echo "<script>alert('未输入新密码')</script>";
                                 }elseif ($_POST['confirm'] == ''){
                                     echo "<script>alert('未确认新密码')</script>";
                                 }elseif($_POST['newpw'] != $_POST['confirm']){
-                                    echo "<script>alert('两次输入密码不一致')</script>";
+                                    echo "<script>alert('两次输入密码不一致')</script>";/*新密码确认*/
                                 }else{
                                     $modpw=mysqli_query($link,"UPDATE `lms_user` SET `password`='{$_POST['newpw']}' WHERE `lms_user`.`id` = '{$_SESSION['UID']}'");
                                     if (!$modpw){

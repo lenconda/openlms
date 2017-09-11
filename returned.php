@@ -1,3 +1,9 @@
+<!--
+Copyright (c) 2017 Peng Hanlin.
+The software is published under the Apache License v2.0.
+Authorized by Peng Hanlin in Nanchang, China.
+Monday, 11, September, 2017
+-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -61,9 +67,6 @@
                         echo "<td>".$books_borrowed['stu_id']."</td>";
                         echo "<td>".$books_borrowed['borrow_time']."</td>";
                         echo "<td>".$books_borrowed['return_time']."</td>";
-                        //echo "<td>".$books_borrowed['intime']."</td>";
-                        //echo "<td>".$books_borrowed['borrow']."</td>";
-                        //echo "<td><div><form method='get' action='#'><button name='br_book_id' class='btn btn-primary' data-toggle='modal' data-target='.myModal1' value='{$books_borrowed['id']}'>借出</button></form></div></td>";
                         echo "</tr>";
                     }
                     ?>
@@ -75,6 +78,4 @@
         </div>
     </div>
 </body>
-<?php include "assets/footer.php";?>
-
 </html>

@@ -1,14 +1,17 @@
+<!--
+Copyright (c) 2017 Peng Hanlin.
+The software is published under the Apache License v2.0.
+Authorized by Peng Hanlin in Nanchang, China.
+Monday, 11, September, 2017
+-->
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <title>图书馆统一登录系统</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"; charset="utf-8">
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <!-- styles -->
+    <link href="bootstrap/bootstrap.css" rel="stylesheet">
     <link type="text/css" href="css/main.css" rel="stylesheet">
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -54,13 +57,12 @@
 <br/><br/><h3 align="center">登录::图书馆统一登录</h3><br/>
 <br/><div align="center" class="panel-body">
     <form id="slick-login" method="post">
-        <!--<label for="username">username</label>--><input type="text" style="width: auto" name="name" class="form-control" placeholder="身份证号"><br/>
-        <!--<label for="password">password</label>--><input type="password" name="pw" style="width: auto" class="form-control" placeholder="密码">
+        <input type="text" style="width: auto" name="name" class="form-control" placeholder="身份证号"><br/>
+        <input type="password" name="pw" style="width: auto" class="form-control" placeholder="密码">
         <br/>
         <input type="submit" name="submit" class="btn btn-primary" value="登录">
         <br/>
     </form>
 </div>
-
 </body>
 </html>

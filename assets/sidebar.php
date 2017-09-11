@@ -1,4 +1,9 @@
-
+<!--
+Copyright (c) 2017 Peng Hanlin.
+The software is published under the Apache License v2.0.
+Authorized by Peng Hanlin in Nanchang, China.
+Monday, 11, September, 2017
+-->
     <div class="col-md-2 sidebar">
         <ul class="nav nav-sidebar">
             <li><a href="index.php">图书借阅</a></li>
@@ -18,7 +23,7 @@
                     <button class='close' data-dismiss='modal'>×</button><!--将关闭按钮放在标题前面可以使按钮位于右上角-->
                     <h4>关于本软件的许可证信息</h4>
                 </div><!--modal-header,弹出层头部区域-->
-                <div class='modal-body' style="height: 520px; overflow: auto">
+                <div class='modal-body' style="height: 520px; overflow: auto"><!--定高之后的overflow:auto可以使元素中出现纵向滚动条-->
                     <p>版权所有 (c) <?php echo date(Y,time()); ?> 彭瀚林</p>
                     <p>   Licensed under the Apache License, Version 2.0 (the "License");
                         you may not use this file except in compliance with the License.</p><br/>
@@ -67,17 +72,3 @@
             </div>
         </div>
     </div>
-
-<!--<div class="col-md-2">
-    <div class="navbar-left content-box" style="display: block;">
-        <div class="list-group" align="left">
-            <a href="#" class="list-group-item list-group-item-info" style="width: auto">管理员功能</a>
-            <a href="index.php" class="list-group-item" style="width: auto">图书借阅</a>
-            <a href="return.php" class="list-group-item" style="width: auto">图书归还</a>
-            <a href="borrowed.php" class="list-group-item" style="width: auto">借出记录</a>
-            <a href="returned.php" class="list-group-item" style="width: auto">归还记录</a>
-            <a href="delay.php" class="list-group-item" style="width: auto">延迟申请</a>
-        </div>
-        <br/>
-    </div>
-</div>-->

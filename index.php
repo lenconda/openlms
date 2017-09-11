@@ -1,3 +1,9 @@
+<!--
+Copyright (c) 2017 Peng Hanlin.
+The software is published under the Apache License v2.0.
+Authorized by Peng Hanlin in Nanchang, China.
+Monday, 11, September, 2017
+-->
 <!DOCTYPE html>
 <html>
   <head>
@@ -132,5 +138,7 @@
             </div>
         </div>
   </body>
-
+  <script>
+      var date=new Date();
+  </script>
 </html>

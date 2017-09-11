@@ -1,4 +1,9 @@
-
+<!--
+Copyright (c) 2017 Peng Hanlin.
+The software is published under the Apache License v2.0.
+Authorized by Peng Hanlin in Nanchang, China.
+Monday, 11, September, 2017
+-->
     <div class="col-md-2 sidebar">
         <ul class="nav nav-sidebar">
             <li><a href="index.php">个人资料</a></li>

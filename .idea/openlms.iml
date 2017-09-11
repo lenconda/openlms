@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
-    <exclude-output />
+  <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="testvue" />
+    <orderEntry type="module" module-name="vote" />
+    <orderEntry type="module" module-name="cssstudy" />
+    <orderEntry type="module" module-name="jsstudy" />
   </component>
 </module>
